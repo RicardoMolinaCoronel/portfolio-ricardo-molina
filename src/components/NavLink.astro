@@ -1,0 +1,7 @@
+---
+// NavLink.astro
+const { href} = Astro.props;
+---
+<a href={href} class="hover:underline hover:text-lg hover:font-bold hover:text-blue-300 transition-all duration-200">
+  <slot />
+</a>

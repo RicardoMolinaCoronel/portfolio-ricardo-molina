@@ -1,9 +1,15 @@
-<header class="flex justify-end py-3 w-[1120px]">
-    <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
-        <a href="#"    
-        class="">Home</a>
-        <a href="#">About</a>
-        <a href="#">Projects</a>
-        <a href="#">Contact</a>
+---
+import NavLink from "./NavLink.astro";
+---
+
+<header class="flex justify-center items-center py-3 w-[1120px] mt-3">
+    <div class="flex flex-col">
+    <span class="flex text-2xl font-bold mb-5 justify-center items-center">Ricardo Molina</span>
+    <nav class="flex flex-row gap-x-10 opacity-90">
+        <NavLink href="#">Home</NavLink>
+        <NavLink href="#">About</NavLink>
+        <NavLink href="#">Projects</NavLink>
+        <NavLink href="#">Contact</NavLink>
     </nav>
+    </div>
 </header>
