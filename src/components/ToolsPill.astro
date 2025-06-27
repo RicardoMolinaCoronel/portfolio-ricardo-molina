@@ -1,0 +1,9 @@
+---
+const { name } = Astro.props;
+---
+<div class="rounded-2xl px-4 py-2 border border-blue-300 flex items-center gap-2
+cursor-crosshair
+">
+    <slot />
+    <span class="text-blue-300">{name}</span>
+</div>

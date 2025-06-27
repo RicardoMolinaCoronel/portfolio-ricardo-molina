@@ -4,6 +4,7 @@ import '@fontsource-variable/fira-code'
 import Header from '../components/Header.astro'
 import './src/styles/global.css'
 
+const { title, description } = Astro.props;
 ---
 
 
@@ -15,11 +16,18 @@ import './src/styles/global.css'
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<meta name="description" content={description}>
+		<title>{title}</title>
 	</head>
 	<body>
-		<Header />
-		<slot />
+		<div class="pointer-events-none fixed inset-0 -z-10">
+			<div class="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
+			<div class="absolute top-[-10%] left-1/2 transform -translate-x-1/2 h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#000)]"></div>
+		</div>
+		<div class="relative z-10">
+			<Header />
+			<slot />
+		</div>
 	</body>
 </html>
 

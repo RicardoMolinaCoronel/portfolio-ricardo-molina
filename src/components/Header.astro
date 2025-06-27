@@ -2,12 +2,12 @@
 import NavLink from "./NavLink.astro";
 ---
 
-<header class="flex justify-between items-center py-3 w-[1120px] mt-3 mx-auto">
+<header class="sticky top-0 z-50 backdrop-blur flex justify-between items-center py-3 w-[1120px] mt-3 mx-auto">
     <span class="flex text-2xl font-extrabold">Ricardo Molina</span>
     <nav class="flex flex-row gap-x-10 opacity-90">
-        <NavLink href="#">Home</NavLink>
-        <NavLink href="#">About</NavLink>
-        <NavLink href="#">Projects</NavLink>
-        <NavLink href="#">Contact</NavLink>
+        <NavLink href="/">Home</NavLink>
+        <NavLink href="/about">About</NavLink>
+        <NavLink href="/projects">Projects</NavLink>
+        <NavLink href="/contact">Contact</NavLink>
     </nav>
 </header>
