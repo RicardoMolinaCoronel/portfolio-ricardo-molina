@@ -5,18 +5,21 @@ interface Props {
     description: string;
     image: string;
     alt: string;
-    imageClass: string;
     link?: string;
 } 
 
-const { title, date, description, image, alt, imageClass, link } = Astro.props;
+const { title, date, description, image, alt, link } = Astro.props;
 ---
 
 
-<div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-<time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">{date}</time>
-<h3 class="text-lg font-semibold text-gray-900 dark:text-white">{title}</h3>
-<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">{description}</p>
+<div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-white dark:bg-gray-200"></div>
+<time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-200">{date}</time>
+
+    <h3 class="flex flex-col items-start gap-2 text-lg font-semibold text-gray-900 dark:text-white">{title}    
+        <div class="h-[2px] bg-gray-300 dark:bg-gray-300 w-1/8 mb-2"></div>
+    </h3>
+  
+<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400 text-pretty">{description}</p>
 <img src={image} alt={alt} class="w-45 rounded-2xl py-2">
 {
     link && (

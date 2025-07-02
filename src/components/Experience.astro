@@ -1,7 +1,22 @@
 
 ---
+import SwiftIcon from "../icons/technologies/Swift.astro"
+import SwiftUIIcon from "../icons/technologies/SwiftUI.astro"
 import ExperienceItem from "./ExperienceItem.astro"
-
+const TAGS = {
+    swift : {
+        name: "Swift",
+        class: "bg-white/30",
+        icon: SwiftIcon,
+        size: "size-6"
+    },
+    swiftUI : {
+        name: "SwiftUI",
+        class: "bg-white/30",
+        icon: SwiftUIIcon,
+        size: "size-9"
+    }
+}
 const experiences = [
     {
         title: "Banco del Pacífico - Desarrollador móvil",
@@ -9,8 +24,7 @@ const experiences = [
         description: "Migración de aplicación móvil Intranet para funcionarios del banco de su versión en Xamarin a su versión en Swift y SwiftUI para dispositivos iOS",
         image: "/logos/bdp.png",
         alt: "Banco del Pacífico",
-        imgClass: "w-24 h-24",
-        link: "#"
+        tags: [TAGS.swift, TAGS.swiftUI]
     },
     {
         title: "RetailPoint del Ecuador - Desarrollador de aplicaciones",
@@ -18,8 +32,7 @@ const experiences = [
         description: "Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.",
         image: "/logos/retailpoint.png",
         alt: "RetailPoint",
-        imgClass: "w-24 h-24",
-        link: "#"
+        tags: [TAGS.swift]
     },
     {
         title: "Application UI code in Tailwind CSS",
@@ -27,16 +40,25 @@ const experiences = [
         description: "Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.",
         image: "/logos/espol_logo.jpg",
         alt: "ESPOL",
-        imgClass: "w-24 h-24",
-        link: "#"
+        tags: [TAGS.swift]
     }
 ]
 ---
-<ol class="relative border-s border-gray-200 dark:border-gray-700">
+<ol class="relative border-s border-gray-200 dark:border-gray-200 ml-4">
     {
         experiences.map(experience => (
         <li class="mb-10 ms-4">
         <ExperienceItem {...experience}/>
+        <h4 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mt-7 mb-4">Technologies
+            <div class="h-[2px] bg-gray-300 dark:bg-gray-300 w-1/16 mb-2"></div>
+        </h4>
+        <ul class="flex flex-row gap-2 mt-2">{
+            experience.tags.map((tag) => (
+                <li class={`flex items-center gap-2 w-fit rounded-full px-4 py-1 cursor-crosshair ${tag.class}`}>
+                    <tag.icon class={tag.size}/> {tag.name}
+                </li>
+            ))
+            }</ul>
         </li>
         ))
     }               
