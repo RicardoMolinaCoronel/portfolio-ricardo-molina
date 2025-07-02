@@ -39,11 +39,19 @@ const { title, description } = Astro.props;
 	
 	html{
 		font-family: 'Fira Code Variable', monospace;
+		scroll-behavior: smooth;
 	}
 	body {
 		background: #000;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		min-height: 100vh;
+	}
+	
+	@media (prefers-reduced-motion: reduce){
+		html{
+			scroll-behavior: auto;
+		}
 	}
 </style>

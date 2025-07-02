@@ -5,14 +5,16 @@ import LinkedInIcon from '../icons/LinkedIn.astro';
 import GitHubIcon from '../icons/GitHub.astro';
 import ReactIcon from '../icons/React.astro';
 import AstroIcon from '../icons/Astro.astro';
+import BriefcaseIcon from '../icons/Briefcase.astro';
 import MainIcons from './MainIcons.astro';
 import ToolPills from './ToolsPill.astro';
 import Experience from './Experience.astro';
+import SectionContainer from './SectionContainer.astro';
 ---
 
 <div id="container">
 	<main>
-		<section id="/" class="w-full mx-auto lg:w-[1120px] py-44 flex justify-between items-center">
+		<SectionContainer class="pt-44 flex justify-between items-center">
 		<div class="flex flex-col justify-center items-center gap-3">
 			<h1 class="text-5xl font-bold text-center">
 			Soy Ricardo Molina,
@@ -40,10 +42,13 @@ import Experience from './Experience.astro';
 			>Construyamos algo juntos</a>
 	</div>
 		<img src="me.webp" alt="imagen ricardo molina" class="rounded-full object-cover w-92 h-92">
-	</section>
-	<section>
+</SectionContainer>
+	<SectionContainer id="experience" class="py-44">
+		<h2 class="flex gap-5 text-3xl font-bold text-center justify-start mb-5">
+			<BriefcaseIcon class="size-8"/>
+			Experiencia</h2>
 		<Experience />
-	</section>
+	</SectionContainer>
 	</main>
 </div>
 
