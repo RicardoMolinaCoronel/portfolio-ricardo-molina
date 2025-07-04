@@ -1,0 +1,588 @@
+---
+import SwiftIcon from "../icons/technologies/Swift.astro"
+import SwiftUIIcon from "../icons/technologies/SwiftUI.astro"
+import UIkitIcon from "../icons/technologies/UIkit.astro"
+import KotlinIcon from "../icons/technologies/Kotlin.astro"
+import XamarinIcon from "../icons/technologies/Xamarin.astro"
+import AndroidStudioIcon from "../icons/technologies/AndroidStudio.astro"
+import XCodeIcon from "../icons/technologies/XCode.astro"
+import CSharpIcon from "../icons/technologies/CSharp.astro"
+import AngularIcon from "../icons/technologies/Angular.astro"
+import AstroIcon from "../icons/technologies/Astro.astro"
+import ReactIcon from "../icons/technologies/React.astro"
+import NodeIcon from "../icons/technologies/Node.astro"
+import PythonIcon from "../icons/technologies/Python.astro"
+import FlutterIcon from "../icons/technologies/Flutter.astro"
+import HuggingFaceIcon from "../icons/technologies/HuggingFace.astro"
+import JavaIcon from "../icons/technologies/Java.astro"
+import TypeScriptIcon from "../icons/technologies/Typescript.astro"
+import TailwindIcon from "../icons/technologies/TailwindCSS.astro"
+import ViteIcon from "../icons/technologies/Vite.astro"
+import GitIcon from "../icons/technologies/Git.astro"
+import GitHubIcon from "../icons/GitHub.astro"
+import AWSIcon from "../icons/technologies/AWS.astro"
+import KubernetesIcon from "../icons/technologies/Kubernetes.astro"
+import DockerIcon from "../icons/technologies/Docker.astro"
+import AsanaIcon from "../icons/technologies/Asana.astro"
+import AzureIcon from "../icons/technologies/Azure.astro"
+//import JiraIcon from "../icons/technologies/Jira.astro"
+//import SlackIcon from "../icons/technologies/Slack.astro"
+//import TrelloIcon from "../icons/technologies/Trello.astro"
+import AzureDevopsIcon from "../icons/technologies/AzureDevops.astro"
+//import JenkinsIcon from "../icons/technologies/Jenkins.astro"
+//gitlab yarn eslint cpanel pytorch
+import CIcon from "../icons/technologies/C.astro"
+import CPlusPlusIcon from "../icons/technologies/CPP.astro"
+import CloudflareIcon from "../icons/technologies/Cloudfare.astro"
+import DjangoIcon from "../icons/technologies/Django.astro"
+import CSSIcon from "../icons/technologies/CSS.astro"
+import HTMLIcon from "../icons/technologies/HTML.astro"
+import DotenvIcon from "../icons/technologies/Dotenv.astro"
+import EclipseIcon from "../icons/technologies/Eclipse.astro"
+import ExpressIcon from "../icons/technologies/Express.astro"
+import FirebaseIcon from "../icons/technologies/Firebase.astro"
+import ExpoIcon from "../icons/technologies/Expo.astro"
+import GithubActionsIcon from "../icons/technologies/GithubActions.astro"
+import GodotEngineIcon from "../icons/technologies/GodotEngine.astro"
+import JavascriptIcon from "../icons/technologies/Javascript.astro"
+import JestIcon from "../icons/technologies/Jest.astro"
+import JetpackComposeIcon from "../icons/technologies/JetpackCompose.astro"
+import JWTIcon from "../icons/technologies/JWT.astro"
+import LaravelIcon from "../icons/technologies/Laravel.astro"
+import LinuxIcon from "../icons/technologies/Linux.astro"
+import MarkdownIcon from "../icons/technologies/Markdown.astro"
+import MaterialUIIcon from "../icons/technologies/MaterialUI.astro"
+import MongoDBIcon from "../icons/technologies/MongoDB.astro"
+import MySQLIcon from "../icons/technologies/MySQL.astro"
+import MotionIcon from "../icons/technologies/Motion.astro"
+import NgrokIcon from "../icons/technologies/Ngrok.astro"
+import NotionIcon from "../icons/technologies/Notion.astro"
+import NPMIcon from "../icons/technologies/NPM.astro"
+import PHPIcon from "../icons/technologies/PHP.astro"
+import PostmanIcon from "../icons/technologies/Postman.astro"
+import PostgreSQLIcon from "../icons/technologies/PostgreSQL.astro"
+import PrettierIcon from "../icons/technologies/Prettier.astro"
+import RedisIcon from "../icons/technologies/Redis.astro"
+import PycharmIcon from "../icons/technologies/Pycharm.astro"
+import RIcon from "../icons/technologies/R.astro"
+import RailwayIcon from "../icons/technologies/Railway.astro"
+import ReactRouterIcon from "../icons/technologies/ReactRouter.astro"
+import ReduxIcon from "../icons/technologies/Redux.astro"
+import RestIcon from "../icons/technologies/Rest.astro"
+import RubyIcon from "../icons/technologies/Ruby.astro"
+import SASSIcon from "../icons/technologies/SASS.astro"
+import ScrumIcon from "../icons/technologies/Scrum.astro"
+import SequelizeIcon from "../icons/technologies/Sequelize.astro"
+import SpringIcon from "../icons/technologies/Spring.astro"
+import SQLServerIcon from "../icons/technologies/SQLServer.astro"
+import SQLiteIcon from "../icons/technologies/SQLite.astro"
+import SwaggerIcon from "../icons/technologies/Swagger.astro"
+import TensorflowIcon from "../icons/technologies/Tensorflow.astro"
+import UbuntuIcon from "../icons/technologies/Ubuntu.astro"
+import UnityIcon from "../icons/technologies/Unity.astro"
+import VimIcon from "../icons/technologies/Vim.astro"
+import VisualStudioIcon from "../icons/technologies/VisualStudio.astro"
+import WebkitIcon from "../icons/technologies/Webkit.astro"
+import WindsurfIcon from "../icons/technologies/Windsurf.astro"
+import WordpressIcon from "../icons/technologies/Wordpress.astro"
+
+
+
+
+export const TAGS = {
+    swift : {
+        name: "Swift",
+        class: "bg-white/30",
+        icon: SwiftIcon,
+        size: "size-6"
+    },
+    swiftUI : {
+        name: "SwiftUI",
+        class: "bg-white/30",
+        icon: SwiftUIIcon,
+        size: "size-6 scale-[1.3]"
+    },
+    kotlin: {
+        name: "Kotlin",
+        class: "bg-white/30",
+        icon: KotlinIcon,
+        size: "size-6"
+    },
+    uikit: {
+        name: "UIKit",
+        class: "bg-white/30",
+        icon: UIkitIcon,
+        size: "size-6"
+    },
+    xamarin: {
+        name: "Xamarin",
+        class: "bg-white/30",
+        icon: XamarinIcon,
+        size: "size-6"
+    },
+    androidStudio: {
+        name: "Android Studio",
+        class: "bg-white/30",
+        icon: AndroidStudioIcon,
+        size: "size-6"
+    },
+    xcode: {
+        name: "XCode",
+        class: "bg-white/30",
+        icon: XCodeIcon,
+        size: "size-6"
+    },
+    csharp: {
+        name: "C#",
+        class: "bg-white/30",
+        icon: CSharpIcon,
+        size: "size-6"
+    },
+    angular: {
+        name: "Angular",
+        class: "bg-white/30",
+        icon: AngularIcon,
+        size: "size-6"
+    },
+    astro: {
+        name: "Astro",
+        class: "bg-white/30",
+        icon: AstroIcon,
+        size: "size-6"
+    },
+    react: {
+        name: "React",
+        class: "bg-white/30",
+        icon: ReactIcon,
+        size: "size-6"
+    },
+    node: {
+        name: "Node",
+        class: "bg-white/30",
+        icon: NodeIcon,
+        size: "size-6"
+    },
+    python: {
+        name: "Python",
+        class: "bg-white/30",
+        icon: PythonIcon,
+        size: "size-6"
+    },
+    flutter: {
+        name: "Flutter",
+        class: "bg-white/30",
+        icon: FlutterIcon,
+        size: "size-6"
+    },
+    huggingFace: {
+        name: "Hugging Face",
+        class: "bg-white/30",
+        icon: HuggingFaceIcon,
+        size: "size-6"
+    },
+    java: {
+        name: "Java",
+        class: "bg-white/30",
+        icon: JavaIcon,
+        size: "size-6"
+    },
+    typescript: {
+        name: "TypeScript",
+        class: "bg-white/30",
+        icon: TypeScriptIcon,
+        size: "size-6"
+    },
+    tailwindCSS: {
+        name: "Tailwind CSS",
+        class: "bg-white/30",
+        icon: TailwindIcon,
+        size: "size-6"
+    },
+    vite: {
+        name: "Vite",
+        class: "bg-white/30",
+        icon: ViteIcon,
+        size: "size-6"
+    },
+    git: {
+        name: "Git",
+        class: "bg-white/30",
+        icon: GitIcon,
+        size: "size-6"
+    },
+    github: {
+        name: "GitHub",
+        class: "bg-white/30",
+        icon: GitHubIcon,
+        size: "size-6"
+    },
+    aws: {  
+        name: "AWS",
+        class: "bg-white/30",
+        icon: AWSIcon,
+        size: "size-6"
+    },
+    kubernetes: {
+        name: "Kubernetes",
+        class: "bg-white/30",
+        icon: KubernetesIcon,
+        size: "size-6"
+    },
+    docker: {
+        name: "Docker",
+        class: "bg-white/30",
+        icon: DockerIcon,
+        size: "size-6"
+    },
+    azure: {
+        name: "Azure",
+        class: "bg-white/30",
+        icon: AzureIcon,
+        size: "size-6"
+    },
+    azureDevops: {
+        name: "Azure DevOps",
+        class: "bg-white/30",
+        icon: AzureDevopsIcon,
+        size: "size-6"
+    },
+    asana: {
+        name: "Asana",
+        class: "bg-white/30",
+        icon: AsanaIcon,
+        size: "size-6"
+    },
+    notion: {
+        name: "Notion",
+        class: "bg-white/30",
+        icon: NotionIcon,
+        size: "size-6"
+    },
+    npm: {
+        name: "npm",
+        class: "bg-white/30",
+        icon: NPMIcon,
+        size: "size-6"
+    },
+    prettier: {
+        name: "prettier",
+        class: "bg-white/30",
+        icon: PrettierIcon,
+        size: "size-6"
+    },
+    jest: {
+        name: "jest",
+        class: "bg-white/30",
+        icon: JestIcon,
+        size: "size-6"
+    },
+    githubActions: {
+        name: "github actions",
+        class: "bg-white/30",
+        icon: GithubActionsIcon,
+        size: "size-6"
+    },
+    C:{
+        name: "C",
+        class: "bg-white/30",
+        icon: CIcon,
+        size: "size-6"
+        },
+    CPlusPlus:{
+        name: "C++",
+        class: "bg-white/30",
+        icon: CPlusPlusIcon,
+        size: "size-6"
+        },
+    Cloudflare:{
+        name: "Cloudflare",
+        class: "bg-white/30",
+        icon: CloudflareIcon,
+        size: "size-6"
+        },
+    Django:{
+        name: "Django",
+        class: "bg-white/30",
+        icon: DjangoIcon,
+        size: "size-6"
+        },
+    CSS:{
+        name: "CSS",
+        class: "bg-white/30",
+        icon: CSSIcon,
+        size: "size-6"
+        },
+    HTML:{
+        name: "HTML",
+        class: "bg-white/30",
+        icon: HTMLIcon,
+        size: "size-6"
+        },
+    dotenv:{
+        name: "dotenv",
+        class: "bg-white/30",
+        icon: DotenvIcon,
+        size: "size-6"
+        },
+    eclipse:{
+        name: "eclipse",
+        class: "bg-white/30",
+        icon: EclipseIcon,
+        size: "size-6"
+        },
+    express:{
+        name: "express",
+        class: "bg-white/30",
+        icon: ExpressIcon,
+        size: "size-6"
+        },
+    firebase:{
+        name: "firebase",
+        class: "bg-white/30",
+        icon: FirebaseIcon,
+        size: "size-6"
+        },
+    expo:{
+        name: "expo",
+        class: "bg-white/30",
+        icon: ExpoIcon,
+        size: "size-6"
+        },
+    godot:{
+        name: "godot",
+        class: "bg-white/30",
+        icon: GodotEngineIcon,
+        size: "size-6"
+        },
+    javascript:{
+        name: "javascript",
+        class: "bg-white/30",
+        icon: JavascriptIcon,
+        size: "size-6"
+        },
+    jetpackCompose:{
+        name: "jetpack compose",
+        class: "bg-white/30",
+        icon: JetpackComposeIcon,
+        size: "size-6"
+        },
+    jwt:{
+        name: "jwt",
+        class: "bg-white/30",
+        icon: JWTIcon,
+        size: "size-6"
+        },
+    laravel:{
+        name: "laravel",
+        class: "bg-white/30",
+        icon: LaravelIcon,
+        size: "size-6"
+        },
+    linux:{
+        name: "linux",
+        class: "bg-white/30",
+        icon: LinuxIcon,
+        size: "size-6"
+        },
+    markdown:{
+        name: "markdown",
+        class: "bg-white/30",
+        icon: MarkdownIcon,
+        size: "size-6"
+        },
+    materialUI:{
+        name: "material ui",
+        class: "bg-white/30",
+        icon: MaterialUIIcon,
+        size: "size-6"
+        },
+    mongodb:{
+        name: "mongodb",
+        class: "bg-white/30",
+        icon: MongoDBIcon,
+        size: "size-6"
+        },
+    mysql:{
+        name: "mysql",
+        class: "bg-white/30",
+        icon: MySQLIcon,
+        size: "size-6"
+        },
+    motion:{
+        name: "motion",
+        class: "bg-white/30",
+        icon: MotionIcon,
+        size: "size-6"
+        },
+    ngrok:{
+        name: "ngrok",
+        class: "bg-white/30",
+        icon: NgrokIcon,
+        size: "size-6"
+        },
+    php:{
+        name: "php",
+        class: "bg-white/30",
+        icon: PHPIcon,
+        size: "size-6"
+        },
+    postman:{
+        name: "postman",
+        class: "bg-white/30",
+        icon: PostmanIcon,
+        size: "size-6"
+        },
+    postgresql:{
+        name: "postgresql",
+        class: "bg-white/30",
+        icon: PostgreSQLIcon,
+        size: "size-6"
+        },
+    redis:{
+        name: "redis",
+        class: "bg-white/30",
+        icon: RedisIcon,
+        size: "size-6"
+        },
+    pycharm:{
+        name: "pycharm",
+        class: "bg-white/30",
+        icon: PycharmIcon,
+        size: "size-6"
+        },
+    r:{
+        name: "r",
+        class: "bg-white/30",
+        icon: RIcon,
+        size: "size-6"
+        },
+    railway:{
+        name: "railway",
+        class: "bg-white/30",
+        icon: RailwayIcon,
+        size: "size-6"
+        },
+    reactRouter:{
+        name: "react router",
+        class: "bg-white/30",
+        icon: ReactRouterIcon,
+        size: "size-6"
+        },
+    redux:{
+        name: "redux",
+        class: "bg-white/30",
+        icon: ReduxIcon,
+        size: "size-6"
+        },
+    rest:{
+        name: "rest",
+        class: "bg-white/30",
+        icon: RestIcon,
+        size: "size-6"
+        },
+    ruby:{
+        name: "ruby",
+        class: "bg-white/30",
+        icon: RubyIcon,
+        size: "size-6"
+        },
+    sass:{
+        name: "sass",
+        class: "bg-white/30",
+        icon: SASSIcon,
+        size: "size-6"
+        },
+    scrum:{
+        name: "scrum",
+        class: "bg-white/30",
+        icon: ScrumIcon,
+        size: "size-6"
+        },
+    sequelize:{
+        name: "sequelize",
+        class: "bg-white/30",
+        icon: SequelizeIcon,
+        size: "size-6"
+        },
+    spring:{
+        name: "spring",
+        class: "bg-white/30",
+        icon: SpringIcon,
+        size: "size-6"
+        },
+    sqlServer:{
+        name: "sql server",
+        class: "bg-white/30",
+        icon: SQLServerIcon,
+        size: "size-6"
+        },
+    sqlite:{
+        name: "sqlite",
+        class: "bg-white/30",
+        icon: SQLiteIcon,
+        size: "size-6"
+        },
+    swagger:{
+        name: "swagger",
+        class: "bg-white/30",
+        icon: SwaggerIcon,
+        size: "size-6"
+        },
+    tensorflow:{
+        name: "tensorflow",
+        class: "bg-white/30",
+        icon: TensorflowIcon,
+        size: "size-6"
+        },
+    ubuntu:{
+        name: "ubuntu",
+        class: "bg-white/30",
+        icon: UbuntuIcon,
+        size: "size-6"
+        },
+    unity:{
+        name: "unity",
+        class: "bg-white/30",
+        icon: UnityIcon,
+        size: "size-6"
+        },
+    vim:{
+        name: "vim",
+        class: "bg-white/30",
+        icon: VimIcon,
+        size: "size-6"
+        },
+    visualStudio:{
+        name: "visual studio",
+        class: "bg-white/30",
+        icon: VisualStudioIcon,
+        size: "size-6"
+        },
+    webkit:{
+        name: "webkit",
+        class: "bg-white/30",
+        icon: WebkitIcon,
+        size: "size-6"
+        },
+    windsurf:{
+        name: "windsurf",
+        class: "bg-white/30",
+        icon: WindsurfIcon,
+        size: "size-6"
+        },
+    wordpress:{
+        name: "wordpress",
+        class: "bg-white/30",
+        icon: WordpressIcon,
+        size: "size-6"
+        },
+        firestore:{
+            name: "firestore",
+            class: "bg-white/30",
+            icon: FirebaseIcon,
+            size: "size-6"
+        }
+}
+    
+
+---

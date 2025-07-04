@@ -1,64 +1,9 @@
 
 ---
-import SwiftIcon from "../icons/technologies/Swift.astro"
-import SwiftUIIcon from "../icons/technologies/SwiftUI.astro"
-import UIkitIcon from "../icons/technologies/UIkit.astro"
-import KotlinIcon from "../icons/technologies/Kotlin.astro"
-import XamarinIcon from "../icons/technologies/Xamarin.astro"
-import AndroidStudioIcon from "../icons/technologies/AndroidStudio.astro"
-import XCodeIcon from "../icons/technologies/XCode.astro"
-import CSharpIcon from "../icons/technologies/CSharp.astro"
+
 import ExperienceItem from "./ExperienceItem.astro"
-const TAGS = {
-    swift : {
-        name: "Swift",
-        class: "bg-white/30",
-        icon: SwiftIcon,
-        size: "size-6"
-    },
-    swiftUI : {
-        name: "SwiftUI",
-        class: "bg-white/30",
-        icon: SwiftUIIcon,
-        size: "size-6 scale-[1.3]"
-    },
-    kotlin: {
-        name: "Kotlin",
-        class: "bg-white/30",
-        icon: KotlinIcon,
-        size: "size-6"
-    },
-    uikit: {
-        name: "UIKit",
-        class: "bg-white/30",
-        icon: UIkitIcon,
-        size: "size-6"
-    },
-    xamarin: {
-        name: "Xamarin",
-        class: "bg-white/30",
-        icon: XamarinIcon,
-        size: "size-6"
-    },
-    androidStudio: {
-        name: "Android Studio",
-        class: "bg-white/30",
-        icon: AndroidStudioIcon,
-        size: "size-6"
-    },
-    xcode: {
-        name: "XCode",
-        class: "bg-white/30",
-        icon: XCodeIcon,
-        size: "size-6"
-    },
-    csharp: {
-        name: "C#",
-        class: "bg-white/30",
-        icon: CSharpIcon,
-        size: "size-6"
-    }
-}
+import { TAGS } from "./TAGS.astro"
+
 const experiences = [
     {
         title: "Banco del Pacífico - Desarrollador móvil",
@@ -66,7 +11,10 @@ const experiences = [
         description: "Migración de aplicación móvil Intranet para funcionarios del banco de su versión en Xamarin a su versión en Swift y SwiftUI para dispositivos iOS",
         image: "/logos/bdp.png",
         alt: "Banco del Pacífico",
-        tags: [TAGS.swift, TAGS.swiftUI, TAGS.kotlin, TAGS.xcode, TAGS.androidStudio, TAGS.uikit, TAGS.csharp, TAGS.xamarin]
+        tags: [TAGS.swift, TAGS.swiftUI, TAGS.kotlin, TAGS.jetpackCompose, TAGS.xcode, TAGS.androidStudio,TAGS.uikit,
+         TAGS.csharp, TAGS.xamarin, TAGS.webkit
+            
+        ]
     },
     {
         title: "RetailPoint del Ecuador - Desarrollador de aplicaciones",
@@ -74,7 +22,11 @@ const experiences = [
         description: "Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.",
         image: "/logos/retailpoint.png",
         alt: "RetailPoint",
-        tags: [TAGS.swift]
+        tags: [TAGS.java, TAGS.kotlin, TAGS.androidStudio, TAGS.react, TAGS.node
+        , TAGS.python, TAGS.javascript, TAGS.typescript, TAGS.firebase,TAGS.firestore, TAGS.express
+        , TAGS.asana, TAGS.git, TAGS.github, TAGS.docker, TAGS.githubActions, TAGS.jest, TAGS.sqlite, TAGS.mysql,
+         TAGS.redux, TAGS.linux, TAGS.sass, TAGS.CSS, TAGS.HTML, TAGS.vite, TAGS.tailwindCSS, TAGS.dotenv, TAGS.pycharm, TAGS.npm,
+        TAGS.jwt]
     },
     {
         title: "Application UI code in Tailwind CSS",
@@ -82,7 +34,9 @@ const experiences = [
         description: "Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.",
         image: "/logos/espol_logo.jpg",
         alt: "ESPOL",
-        tags: [TAGS.swift]
+        tags: [TAGS.tensorflow, TAGS.python, TAGS.Django, TAGS.postgresql, TAGS.sqlite, TAGS.git,
+            TAGS.github
+        ]
     }
 ]
 ---
