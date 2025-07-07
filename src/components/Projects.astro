@@ -1,0 +1,143 @@
+---
+import { TAGS } from "./TAGS.astro"
+const PROJECTS = [
+    {
+        title: "Intranet BdP",
+        description: "Intranet BdP es un aplicativo móvil hecho para los funcionarios de banco del pacífico, con funciones como búsqueda de información del trabajador, consulta de horarios y menús de las cafeterías y restaurantes de su matriz correspondiente, y demás procesos autorizados para cada funcionario según su puesto",
+        image: "/projects/bdp1.webp",
+        alt: "Banco del Pacífico",
+        tags: [TAGS.swift, TAGS.swiftUI, TAGS.kotlin, TAGS.jetpackCompose, TAGS.xcode, TAGS.androidStudio,TAGS.uikit, TAGS.webkit         
+        ],
+        imageClass: "w-80",
+        link:"/"
+    },
+    {
+        title: "Analytics Admin",
+        description: `Analytics Admin es una aplicación web diseñada para visualizar y administrar un panel de control con métricas clave sobre el flujo de entrada y salida de clientes en los locales 
+        de la empresa, así como indicadores de conversión y otros KPIs relevantes.
+El sistema obtiene datos procesados por cámaras con inteligencia artificial a través de un backend, 
+los cuales se almacenan en una base de datos y se combinan con archivos de facturación y otros registros 
+de la empresa que utiliza el servicio.
+        `,
+        image: "/projects/analytics1.webp",
+        imageClass: "w-120",
+        alt: "Banco del Pacífico",
+        tags: [TAGS.react, TAGS.vite, TAGS.CSS, TAGS.HTML, TAGS.redux, TAGS.express, TAGS.node, TAGS.npm, TAGS.mysql, TAGS.sequelize, TAGS.git, TAGS.github, TAGS.cpanel         
+        ],
+        link:"/"
+    },
+
+    {
+        title: "Suplaier web",
+        description: `Suplaier Web es la versión web del sistema Suplaier, diseñada para facilitar la interacción entre vendedores y compradores desde dispositivos móviles.
+La aplicación permite a los vendedores publicar ofertas de productos disponibles, mientras que los compradores pueden unirse a dichas ofertas, incluyendo modalidades como las ofertas cooperativas,
+ que brindan descuentos a cambio de un mayor tiempo de espera.
+Asimismo, la plataforma incorpora una funcionalidad de demanda de productos, donde los compradores publican sus necesidades y los vendedores presentan sus propuestas, permitiendo a los compradores seleccionar la oferta más conveniente.
+        `,
+        image: "/projects/bdp1.webp",
+        imageClass: "w-80",
+        alt: "Banco del Pacífico",
+        tags: [TAGS.react, TAGS.sass, TAGS.CSS, TAGS.HTML, TAGS.node, TAGS.redux, TAGS.express, TAGS.mysql, TAGS.swagger, TAGS.git, TAGS.github, TAGS.npm, TAGS.asana     
+        ],
+        link:"/"
+    },    {
+        title: "Suplaier mobile",
+        description: `Suplaier Mobile es la versión móvil del sistema Suplaier, diseñada para facilitar la interacción entre vendedores y compradores desde dispositivos móviles.
+Posee las mismas funcionalidades que la versión web, pero con una interfaz adaptada a estos dispositivos.
+        `,
+        image: "/projects/bdp1.webp",
+        imageClass: "w-80",
+        alt: "Banco del Pacífico",
+        tags: [TAGS.reactnative, TAGS.CSS, TAGS.redux, TAGS.git, TAGS.github, TAGS.npm, TAGS.asana     
+        ],
+        link:"/"
+    },    
+    {
+        title: "ClearInventory",
+        description: `Clear Inventory es una aplicación móvil para Android orientada al control de inventarios, 
+        tanto de activos fijos empresariales como de productos en stock.
+         Integra tecnología RFID para la lectura de etiquetas, lo que permite relacionar 
+         la información obtenida con archivos o bases de datos asociadas a los productos. 
+         Entre sus funcionalidades destacan la generación de reportes, envío de correos electrónicos, 
+        exportación de datos en formato CSV y visualización del inventario en tiempo real, entre otras herramientas de gestión avanzadas.
+
+        `,
+        image: "/projects/bdp1.webp",
+        imageClass: "w-80",
+        alt: "Banco del Pacífico",
+        tags: [TAGS.java, TAGS.kotlin, TAGS.androidsdk, TAGS.androidStudio, TAGS.firebase, TAGS.rest, TAGS.mvvm ,TAGS.git, TAGS.github 
+        ],
+        link:"/"
+    },    
+    {
+        title: "Parkinson Disease Research",
+        description: `Este proyecto de investigación se centra en 
+        el estudio de la enfermedad de Parkinson, mediante el análisis
+         de datos recolectados con sensores inerciales (IMU) durante 
+         pruebas de marcha en línea recta realizadas por pacientes diagnosticados
+          o en evaluación. El objetivo principal es identificar patrones mediante
+           modelos de Inteligencia Artificial que permitan predecir el riesgo 
+           de padecer la enfermedad. Para ello, se evaluaron diez modelos de 
+           machine learning y deep learning: MLP Network, Random Forest,
+            XGBoost, Support Vector Machine, K-Nearest Neighbors, Regresión 
+            Logística, Árbol de Decisión, Time Series Transformer, LSTM y VGG-16 
+            con aprendizaje por transferencia. El modelo LSTM obtuvo el mejor 
+            rendimiento, alcanzando una precisión del 93.79%. Como resultado, se desarrolló una aplicación web dirigida a profesionales de la salud, que permite utilizar el modelo entrenado como herramienta de apoyo en el diagnóstico clínico.
+        `,
+        image: "/projects/bdp1.webp",
+        imageClass: "w-80",
+        alt: "Banco del Pacífico",
+        tags: [TAGS.python, TAGS.tensorflow, TAGS.keras, TAGS.pytorch, TAGS.matplotlib, TAGS.seaborn, TAGS.scikitLearn, TAGS.juptyer, TAGS.Django, TAGS.sqlite, TAGS.react, TAGS.node, TAGS.vite, TAGS.redux, TAGS.npm, TAGS.git, TAGS.github
+        ],
+        link:"/"
+    },    
+    {
+        title: "Heart Attack Prediction Research",
+        description: `Este proyecto se enfocó en el entrenamiento y
+         evaluación de seis modelos de machine learning utilizando 
+         datos tabulares de pacientes, con el objetivo de predecir 
+         el riesgo de infarto al miocardio. Se analizaron los modelos 
+         MLP Network, Support Vector Machine (SVM), XGBoost, Random Forest, 
+         Regresión Logística y Árbol de Decisión. Los modelos XGBoost y 
+         Random Forest obtuvieron el mejor desempeño, alcanzando una precisión 
+         del 98.75%. Como parte del proyecto, se desarrolló una aplicación web 
+         que permite a los usuarios cargar sus datos tabulares y obtener predicciones 
+         de manera automatizada.
+
+
+        `,
+        image: "/projects/bdp1.webp",
+        imageClass: "w-80",
+        alt: "Banco del Pacífico",
+        tags: [TAGS.python, TAGS.tensorflow, TAGS.keras, TAGS.matplotlib, TAGS.seaborn, TAGS.scikitLearn, TAGS.juptyer, TAGS.flask, TAGS.react, TAGS.node, TAGS.vite, TAGS.redux, TAGS.npm, TAGS.git, TAGS.github
+        ],
+        link:"/"
+    }
+]
+---
+
+{
+    PROJECTS.map(project => (
+<article class="flex flex-row gap-2 justify-between items-center py-10">
+    <img src={project.image} alt={project.alt} class={`${project.imageClass}`}>
+    <div class="flex flex-col gap-2">
+        <h3 class="flex flex-col items-start gap-2 text-lg font-semibold text-gray-900 dark:text-white">{project.title}    
+        <div class="h-[2px] bg-gray-300 dark:bg-gray-300 w-1/8 mb-2"></div>
+    </h3>    <p class="text-pretty w-150">{project.description}</p>
+    <h4 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mt-7 mb-1">Tecnologías
+            <div class="h-[2px] bg-gray-300 dark:bg-gray-300 w-1/16 mb-2"></div>
+        </h4>
+    <ul class="flex flex-row flex-wrap gap-2 mt-1 w-150">
+        {
+            project.tags.map(tag => (
+                <li>                    <span class={`flex items-center gap-x-2 text-sm rounded-full px-4 py-1 cursor-crosshair ${tag.class}`}>
+                        <tag.icon class={tag.size} />
+                        {tag.name}
+                    </span></li>
+            ))
+        }
+    </ul>
+    </div>
+</article>
+    ))
+}

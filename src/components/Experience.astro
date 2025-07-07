@@ -12,7 +12,7 @@ const experiences = [
         image: "/logos/bdp.png",
         alt: "Banco del Pacífico",
         tags: [TAGS.swift, TAGS.swiftUI, TAGS.kotlin, TAGS.jetpackCompose, TAGS.xcode, TAGS.androidStudio,TAGS.uikit,
-         TAGS.csharp, TAGS.xamarin, TAGS.webkit
+         TAGS.csharp, TAGS.xamarin, TAGS.webkit, TAGS.gitlab, TAGS.azureDevops
             
         ]
     },
@@ -22,7 +22,7 @@ const experiences = [
         description: "Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.",
         image: "/logos/retailpoint.png",
         alt: "RetailPoint",
-        tags: [TAGS.java, TAGS.kotlin, TAGS.androidStudio, TAGS.react, TAGS.node
+        tags: [TAGS.java, TAGS.kotlin, TAGS.jetpackCompose,TAGS.androidStudio, TAGS.react, TAGS.node
         , TAGS.python, TAGS.javascript, TAGS.typescript, TAGS.firebase,TAGS.firestore, TAGS.express
         , TAGS.asana, TAGS.git, TAGS.github, TAGS.docker, TAGS.githubActions, TAGS.jest, TAGS.sqlite, TAGS.mysql,
          TAGS.redux, TAGS.linux, TAGS.sass, TAGS.CSS, TAGS.HTML, TAGS.vite, TAGS.tailwindCSS, TAGS.dotenv, TAGS.pycharm, TAGS.npm,
@@ -34,8 +34,8 @@ const experiences = [
         description: "Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.",
         image: "/logos/espol_logo.jpg",
         alt: "ESPOL",
-        tags: [TAGS.tensorflow, TAGS.python, TAGS.Django, TAGS.postgresql, TAGS.sqlite, TAGS.git,
-            TAGS.github
+        tags: [TAGS.tensorflow, TAGS.scikitLearn, TAGS.pytorch, TAGS.python, TAGS.Django, TAGS.postgresql, TAGS.sqlite, TAGS.git,
+            TAGS.github, TAGS.pycharm
         ]
     }
 ]
@@ -54,7 +54,6 @@ const experiences = [
                     <span class={`flex items-center gap-x-2 text-sm rounded-full px-4 py-1 cursor-crosshair ${tag.class}`}>
                         <tag.icon class={tag.size} />
                         {tag.name}
-
                     </span>
                 </li>
             ))

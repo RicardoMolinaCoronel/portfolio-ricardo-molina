@@ -10,6 +10,10 @@ import MainIcons from './MainIcons.astro';
 import ToolPills from './ToolsPill.astro';
 import Experience from './Experience.astro';
 import SectionContainer from './SectionContainer.astro';
+import CodeIcon from '../icons/Code.astro';
+import Projects from './Projects.astro';
+import Education from './Education.astro';
+import Contact from './Contact.astro';
 ---
 
 <div id="container">
@@ -48,6 +52,27 @@ import SectionContainer from './SectionContainer.astro';
 			<DeskIcon class="size-8"/>
 			Experiencia</h2>
 		<Experience />
+	</SectionContainer>
+
+	<SectionContainer id="projects" class="py-44">
+		<h2 class="flex flex-col lg:flex-row gap-2 pb-3 lg:gap-5 text-3xl font-semibold text-center justify-center items-center lg:justify-start mb-5">
+			<CodeIcon class="size-8"/>
+			Proyectos</h2>
+		<Projects />
+	</SectionContainer>
+
+	<SectionContainer id="education" class="py-44">
+		<h2 class="flex flex-col lg:flex-row gap-2 pb-3 lg:gap-5 text-3xl font-semibold text-center justify-center items-center lg:justify-start mb-5">
+			<CodeIcon class="size-8"/>
+			Educación</h2>
+		<Education />
+	</SectionContainer>
+
+	<SectionContainer id="contact" class="py-44">
+		<h2 class="flex flex-col lg:flex-row gap-2 pb-3 lg:gap-5 text-3xl font-semibold text-center justify-center items-center lg:justify-start mb-5">
+			<CodeIcon class="size-8"/>
+			Contacto</h2>
+		<Contact />
 	</SectionContainer>
 	</main>
 </div>
