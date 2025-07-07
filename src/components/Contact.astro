@@ -1,11 +1,94 @@
 ---
-
-
-
-
+import ToolsPill from "./ToolsPill.astro";
+import GmailIcon from "../icons/technologies/Gmail.astro";
+import PhoneIcon from "../icons/Phone.astro";
+import MailIcon from "../icons/Mail.astro";
+import CopyIcon from "../icons/Copy.astro";
+import CopyCheckIcon from "../icons/CopyCheck.astro";
+import LinkedinIcon from "../icons/LinkedinOriginal.astro";
+import GithubIcon from "../icons/technologies/Github.astro";
+import AnimationContact from "../icons/AnimationContact.astro";
 ---
-<div>
+<div class="flex flex-col gap-5 justify-center items-center">
+    <h2 class="text-2xl font-semibold text-gray-900 dark:text-white flex items-center gap-4 flex-row">
+        <AnimationContact class="size-12 -mb-2 -mt-2" />
+        Pongámonos en contacto!
 
+    </h2>
+<ToolsPill divClass="justify-between px-10 mt-3">
     
+    <div class="flex items-center gap-2">
+    <a href="mailto:ricardoduvalmolinacoronel@gmail.com" title="Enviar correo" class="hover:scale-120 transition-all duration-300">
+        <GmailIcon class="size-6 text-white" />
+      </a>    
+    <span class="text-white mr-4">ricardoduvalmolinacoronel@gmail.com</span>
+    </div>
+    
+<div class="flex items-center gap-2">
+    <a href="mailto:ricardoduvalmolinacoronel@gmail.com" title="Enviar correo" class="hover:text-blue-300 transition-all duration-300">
+        <MailIcon class="size-6 " />
+      </a>  
+      <button class="copy-btn ml-2" data-copy="ricardoduvalmolinacoronel@gmail.com" title="Copiar correo">
+        <span class="icon-wrapper relative">
+            <span class="copy-icon block cursor-copy hover:text-blue-300 transition-all duration-300"><CopyIcon /></span>
+            <span class="check-icon hidden text-green-500 "><CopyCheckIcon /></span>
+          </span>
+        </button>
+    </div>
 
+</ToolsPill>
+
+<ToolsPill divClass="justify-between px-10">
+    <div class="flex items-center gap-2">
+    <PhoneIcon class="size-6" />
+    <span class="text-white">+593 0988975302</span>
 </div>
+<div class="flex items-center gap-2">
+      <button class="copy-btn ml-2" data-copy="+593 0988975302" title="Copiar numero">
+        <span class="icon-wrapper relative">
+            <span class="copy-icon block cursor-copy hover:text-blue-300 transition-all duration-300"><CopyIcon /></span>
+            <span class="check-icon hidden text-green-500"><CopyCheckIcon /></span>
+          </span>
+        </button>
+    </div>
+
+</ToolsPill>
+<span>o</span>
+<div class="flex flex-row gap-2">
+    <a href="https://github.com/ricardoduvalmolinacoronel" title="Ir a GitHub" class="
+    p-2 bg-gray-900  rounded-full hover:scale-120 transition-all duration-300 cursor-pointer">
+        <GithubIcon class="size-7" />
+      </a>
+    <a href="https://www.linkedin.com/in/ricardo-duval-molina-coronel/" title="Ir a LinkedIn" class="p-2 bg-white/90 backdrop-blur-2xl rounded-full hover:scale-120 transition-all duration-300 cursor-pointer">
+        <LinkedinIcon class="size-7 text-white p-0.5" />
+      </a>
+</div>
+
+  
+</div>
+
+<!-- Script que se ejecuta en el cliente -->
+<script is:client>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".copy-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const text = btn.getAttribute("data-copy");
+          const copyIcon = btn.querySelector(".copy-icon");
+          const checkIcon = btn.querySelector(".check-icon");
+  
+          navigator.clipboard.writeText(text).then(() => {
+            btn.title = "¡Copiado!";
+            copyIcon.classList.add("hidden");
+            checkIcon.classList.remove("hidden");
+  
+            setTimeout(() => {
+              copyIcon.classList.remove("hidden");
+              checkIcon.classList.add("hidden");
+              btn.title = "Copiar";
+            }, 2000);
+          });
+        });
+      });
+    });
+  </script>
+  

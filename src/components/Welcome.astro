@@ -16,9 +16,19 @@ import Education from './Education.astro';
 import Contact from './Contact.astro';
 ---
 
-<div id="container">
-	<main class="px-2">
-		<SectionContainer class="pt-25 lg:pt-44 min-h-[calc(100vh-12rem)] flex flex-col-reverse lg:flex-row lg:justify-between items-center">
+<div id="section-label"
+     class="fixed left-1/32 top-1/2 -translate-y-1/2 z-50 hidden lg:block
+            text-lg tracking-widest font-bold rotate-[-90deg] origin-left pl-4
+            text-white transition-all duration-500 ease-in-out">
+  <span class="transition-all duration-500 ease-in-out block opacity-100 translate-y-0 text-6xl font-semibold text-gray-500">
+    
+  </span>
+</div>
+
+
+
+	<main class="px-60">
+		<SectionContainer id="home" data-label=" "class="pt-25 lg:pt-44 min-h-[calc(100vh-12rem)] flex flex-col-reverse lg:flex-row lg:justify-between items-center">
 		<div class="flex flex-col justify-center items-center gap-3">
 			<h1 class="lg:text-5xl text-3xl font-bold text-center">
 			Soy Ricardo Molina,
@@ -47,28 +57,28 @@ import Contact from './Contact.astro';
 	</div>
 		<img src="me.webp" alt="imagen ricardo molina" class="rounded-full object-cover w-92 h-92 mb-10 lg:mb-0">
 </SectionContainer>
-	<SectionContainer id="experience" class="py-44">
+	<SectionContainer id="experience" data-label="Experiencia" class="py-44">
 		<h2 class="flex flex-col lg:flex-row gap-2 pb-3 lg:gap-5 text-3xl font-semibold text-center justify-center items-center lg:justify-start mb-5">
 			<DeskIcon class="size-8"/>
 			Experiencia</h2>
 		<Experience />
 	</SectionContainer>
 
-	<SectionContainer id="projects" class="py-44">
+	<SectionContainer id="projects" data-label="Proyectos" class="py-44">
 		<h2 class="flex flex-col lg:flex-row gap-2 pb-3 lg:gap-5 text-3xl font-semibold text-center justify-center items-center lg:justify-start mb-5">
 			<CodeIcon class="size-8"/>
 			Proyectos</h2>
 		<Projects />
 	</SectionContainer>
 
-	<SectionContainer id="education" class="py-44">
+	<SectionContainer id="education" data-label="Educación" class="py-44">
 		<h2 class="flex flex-col lg:flex-row gap-2 pb-3 lg:gap-5 text-3xl font-semibold text-center justify-center items-center lg:justify-start mb-5">
 			<CodeIcon class="size-8"/>
 			Educación</h2>
 		<Education />
 	</SectionContainer>
 
-	<SectionContainer id="contact" class="py-44">
+	<SectionContainer id="contact" data-label="Contacto" class="py-44">
 		<h2 class="flex flex-col lg:flex-row gap-2 pb-3 lg:gap-5 text-3xl font-semibold text-center justify-center items-center lg:justify-start mb-5">
 			<CodeIcon class="size-8"/>
 			Contacto</h2>
@@ -77,4 +87,71 @@ import Contact from './Contact.astro';
 	</main>
 </div>
 
-
+<script is:inline>
+	document.addEventListener('DOMContentLoaded', () => {
+	  const labelEl = document.getElementById('section-label');
+	  const span = labelEl.querySelector('span');
+	  const sections = Array.from(document.querySelectorAll('section[data-label]'));
+  
+	  let currentLabel = "";
+  
+	  function getCurrentSection() {
+		const viewportHeight = window.innerHeight;
+		let current = null;
+		let minDiff = Infinity;
+  
+		sections.forEach(section => {
+		  const rect = section.getBoundingClientRect();
+		  const diff = Math.abs(rect.top + rect.height / 2 - viewportHeight / 2);
+		  if (diff < minDiff && rect.top < viewportHeight) {
+			minDiff = diff;
+			current = section;
+		  }
+		});
+  
+		return current;
+	  }
+  
+	  function updateLabel() {
+		const section = getCurrentSection();
+		if (!section) return;
+  
+		const newLabel = section.getAttribute('data-label');
+		if (newLabel !== currentLabel && newLabel) {
+		  currentLabel = newLabel;
+  
+		  // Fade out + slide down
+		  span.classList.add('opacity-0', 'translate-y-2');
+			console.log(section.id)
+		  // Esperar a que termine la animación antes de cambiar el texto
+			if (section.id != "home") {
+		
+			
+		  setTimeout(() => {
+			span.textContent = newLabel;
+			// Fade in + reset slide
+			span.classList.remove('translate-y-2');
+			span.classList.add('translate-y-0');
+			span.classList.remove('opacity-0');
+		  }, 300); // Debe coincidir con duration-500 (aprox. mitad)
+		}else{
+			span.classList.remove('translate-y-2');
+			span.classList.add('translate-y-0');
+			span.classList.remove('opacity-0');
+			span.textContent = newLabel;
+		}
+	}
+	  }
+  
+	  // Ejecutar al cargar y al hacer scroll
+	  updateLabel();
+	  window.addEventListener('scroll', () => {
+		window.requestAnimationFrame(updateLabel);
+	  });
+	});
+  </script>
+  
+  
+  
+  
+  

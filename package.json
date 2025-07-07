@@ -11,8 +11,10 @@
   "dependencies": {
     "@fontsource-variable/fira-code": "^5.2.6",
     "@fontsource/ibm-plex-mono": "^5.2.6",
+    "@lottiefiles/lottie-player": "^2.0.12",
     "@tailwindcss/vite": "^4.1.10",
     "astro": "^5.9.3",
+    "lottie-web": "^5.13.0",
     "tailwindcss": "^4.1.10"
   }
 }

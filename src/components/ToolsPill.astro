@@ -1,9 +1,12 @@
 ---
-const { name } = Astro.props;
+interface Props {
+    divClass: String;
+}
+
+const { divClass } = Astro.props;
 ---
-<div class="rounded-2xl px-4 py-2 border border-blue-300 flex items-center gap-2
-cursor-crosshair
-">
+<div  class={`rounded-2xl px-4 py-2 border border-white flex items-center gap-2
+cursor-crosshair w-135 bg-white/20 backdrop-blur-2xl ${divClass}`}
+>
     <slot />
-    <span class="text-blue-300">{name}</span>
 </div>
