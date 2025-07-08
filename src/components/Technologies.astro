@@ -1,0 +1,21 @@
+---
+import TechnologieItem from "./TechnologieItem.astro"
+import { TAGS } from "./TAGS.astro"
+
+const TECHNOLOGIES = [
+    {
+        name: "Programming Languages",
+        class: "bg-gray-800/80",
+        tags: [TAGS.java, TAGS.kotlin, TAGS.swift, TAGS.javascript, TAGS.python, TAGS.r, TAGS.C, TAGS.csharp],
+        size: "size-6"
+    }
+]
+---
+
+{
+    TECHNOLOGIES.map(technology => (
+        <TechnologieItem {...technology}/>
+    ))
+}
+
+

@@ -1,0 +1,20 @@
+---
+const {name, tags, class: className, size} = Astro.props;
+---
+
+<div class="flex flex-col items-center gap-2">
+    <h3 class="flex flex-col items-start gap-2 text-xl font-semibold text-gray-900 dark:text-white">{name} 
+        <div class="h-[2px] bg-gray-300 dark:bg-gray-300 w-1/4 mb-2"></div>
+    </h3>    <div class="flex flex-row gap-2">
+        <ul class="flex flex-row flex-wrap gap-2 mt-2">{
+            tags.map((tag) => (
+                <li>
+                    <span class={`flex items-center gap-x-2 text-sm rounded-full px-4 py-1 cursor-crosshair ${tag.class}`}>
+                        <tag.icon class={tag.size} />
+                        {tag.name}
+                    </span>
+                </li>
+            ))
+            }</ul>
+    </div>
+</div>

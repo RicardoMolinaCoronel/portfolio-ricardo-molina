@@ -14,13 +14,14 @@ import CodeIcon from '../icons/Code.astro';
 import Projects from './Projects.astro';
 import Education from './Education.astro';
 import Contact from './Contact.astro';
+import Technologies from './Technologies.astro';
 ---
 
 <div id="section-label"
-     class="fixed left-1/32 top-8/12 -translate-y-1/2 z-50 hidden lg:block
+     class="fixed left-1/16 top-9/12 -translate-y-1/2 z-50 hidden lg:block
             text-lg tracking-widest font-bold rotate-[-90deg] origin-left pl-4
             text-white transition-all duration-500 ease-in-out">
-  <span class="transition-all duration-500 ease-in-out block opacity-100 translate-y-0 text-6xl font-semibold text-gray-500">
+  <span class="transition-all duration-500 ease-in-out block opacity-100 translate-y-0 text-5xl font-semibold text-gray-500/50">
     
   </span>
 </div>
@@ -78,10 +79,18 @@ import Contact from './Contact.astro';
 		<Education />
 	</SectionContainer>
 
-	<SectionContainer id="contact" data-label="Contacto" class="py-44">
+	
+	<SectionContainer id="technologies" data-label="Tecnologías" class="py-44">
 		<h2 class="flex flex-col lg:flex-row gap-2 pb-3 lg:gap-5 text-3xl font-semibold text-center justify-center items-center lg:justify-start mb-5">
 			<CodeIcon class="size-8"/>
-			Contacto</h2>
+			Tecnologías</h2>
+		<Technologies />
+	</SectionContainer>
+
+	<SectionContainer id="contact" data-label="Contacto" class="pt-5 min-h-[calc(100vh-12rem)]">
+		<!-- <h2 class="flex flex-col lg:flex-row gap-2 pb-3 lg:gap-5 text-3xl font-semibold text-center justify-center items-center lg:justify-start mb-5">
+			<CodeIcon class="size-8"/>
+			Contacto</h2> -->
 		<Contact />
 	</SectionContainer>
 	</main>
@@ -102,7 +111,7 @@ import Contact from './Contact.astro';
   
 		sections.forEach(section => {
 		  const rect = section.getBoundingClientRect();
-		  const diff = Math.abs(rect.top + rect.height / 2 - viewportHeight / 2);
+		  const diff = Math.abs(rect.top - 50); // más sensible al inicio
 		  if (diff < minDiff && rect.top < viewportHeight) {
 			minDiff = diff;
 			current = section;
@@ -124,7 +133,6 @@ import Contact from './Contact.astro';
 		  span.classList.add('opacity-0', 'translate-y-2');
 			console.log(section.id)
 		  // Esperar a que termine la animación antes de cambiar el texto
-			if (section.id != "home") {
 		
 			
 		  setTimeout(() => {
@@ -134,12 +142,7 @@ import Contact from './Contact.astro';
 			span.classList.add('translate-y-0');
 			span.classList.remove('opacity-0');
 		  }, 300); // Debe coincidir con duration-500 (aprox. mitad)
-		}else{
-			span.classList.remove('translate-y-2');
-			span.classList.add('translate-y-0');
-			span.classList.remove('opacity-0');
-			span.textContent = newLabel;
-		}
+
 	}
 	  }
   
@@ -150,7 +153,6 @@ import Contact from './Contact.astro';
 	  });
 	});
   </script>
-  
   
   
   
