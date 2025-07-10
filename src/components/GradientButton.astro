@@ -1,0 +1,22 @@
+---
+// Props esperados
+const { label, icon, gradient } = Astro.props;
+---
+
+<div class={`flex items-center w-64 h-14 rounded-full overflow-hidden shadow-lg cursor-pointer transform transition hover:scale-105 ${gradient}`}>
+  <!-- Triángulo con ícono -->
+  <div class="w-14 h-14 bg-white clip-triangle flex justify-center items-center">
+    <img src={icon} alt="icon" class="w-5 h-5" />
+  </div>
+
+  <!-- Texto -->
+  <div class="flex-1 text-white text-lg font-semibold pl-4">
+    {label}
+  </div>
+</div>
+
+<style>
+  .clip-triangle {
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+  }
+</style>

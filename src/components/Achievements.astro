@@ -1,0 +1,99 @@
+---
+import {TAGS} from "./TAGS.astro"
+import AchievementItem from "./AchievementItem.astro"
+const achievements = [
+    {
+        title: "AWS Academy Graduate - AWS Academy Data Engineering",
+        subtitle: "Amazon Web Services Training and Certification",
+        date: "Ene 2025 - Ene 2028",
+        description: `Esta certificación, otorgada por Amazon Web Services (AWS), valida la finalización del curso AWS Academy Data Engineering y certifica competencias clave en el diseño, construcción y mantenimiento de arquitecturas de datos en la nube, así como en la creación de pipelines de datos escalables, la implementación de principios de seguridad en el manejo de datos y el uso de servicios de AWS enfocados en ingeniería de datos. Además, demuestra dominio del ciclo de vida del dato, abarcando su ingesta, procesamiento, almacenamiento y análisis.`,
+        image: "/achievements/awsCertificate.webp",
+        alt: "Certificación AWS Academy Data Engineering",
+        tags: [TAGS.aws],
+        imageClass: "",
+        externalLink:"https://www.credly.com/badges/4d0622da-437d-4893-a262-1562282cd203/linked_in_profile"
+    },
+    {
+        title: "C1 English proficiency - Cambridge Placement Test",
+        subtitle: "CELEX - Centro de Lenguas Extranjeras / Cambridge",
+        date: "Mar 2025",
+        description: `Certificación otorgada por el Centro de Lenguas Extranjeras (CELEX) de la Escuela Superior Politécnica del Litoral (ESPOL), que acredita el rendimiento del Cambridge Placement Test el 8 de diciembre de 2024, 
+        obteniendo el puntaje máximo de 50/50, correspondiente al nivel C1 o superior del
+         Marco Común Europeo de Referencia para las Lenguas (MCER).`,
+        image: "/achievements/c1English.webp",
+        alt: "English C1 proficiency certification",
+        tags: [TAGS.aws],
+        imageClass: "",
+        externalLink:"https://www.credly.com/badges/4d0622da-437d-4893-a262-1562282cd203/linked_in_profile"
+    },    
+    {
+        title: "Mentoring Program",
+        subtitle: "ESPOL - Escuela Superior Politécnica del Litoral",
+        date: "Feb 2025 - Feb 2028",
+        description: `Esta acreditación valida mi participación y compromiso 
+        en el Programa Institucional de Mentorías de la Escuela Superior Politécnica del Litoral (ESPOL), 
+        donde, como estudiante de último nivel, llevé a cabo un plan de acción orientado al logro de objetivos profesionales 
+        mediante cinco sesiones con un mentor del sector industrial. Durante el programa fortalecí habilidades clave como 
+        pensamiento crítico, comunicación efectiva, aprendizaje continuo, relacionamiento y competencias para el mercado laboral, 
+        dentro de un entorno de acompañamiento, experiencia y networking profesional.`,
+        image: "/achievements/mentoring.webp",
+        alt: "Mentoring program ESPOL",
+        tags: [TAGS.aws],
+        imageClass: "",
+        externalLink:"https://www.acreditta.com/credential/439333a2-bb43-4ed8-8edc-5b22f716c3c6?utm_source=linkedin_profile&resource_type=badge&resource=439333a2-bb43-4ed8-8edc-5b22f716c3c6"
+    },    
+    {
+        title: "Advanced Programming in Swift",
+        subtitle: "Meta / Coursera",
+        date: "Jul 2025 - Jul 2028",
+        description: `Certificación emitida por Meta a través de Coursera que valida conocimientos avanzados en desarrollo con Swift, incluyendo la implementación de aplicaciones iOS con capacidades de búsqueda y filtrado, la creación de tipos de datos personalizados, el uso de pruebas unitarias con mocks y fakes, así como buenas prácticas de organización de código utilizando herencia, protocolos y delegación. Esta formación refuerza habilidades en patrones de diseño, testing de software, programación orientada a objetos y desarrollo funcional aplicados al entorno de desarrollo de Apple con Xcode.`,
+        image: "/achievements/advancedSwiftMeta.webp",
+        alt: "Advanced Programming in Swift",
+        tags: [TAGS.aws],
+        imageClass: "",
+        externalLink:"https://www.coursera.org/account/accomplishments/verify/ZYC0YKSMQCPR"
+    },    
+    {
+        title: "Kotlin for Java Developers",
+        subtitle: "Jetbrains / Coursera",
+        date: "Jun 2025 - Jun 2028",
+        description: `Certificación emitida por JetBrains a través de Coursera que acredita la finalización 
+        del curso "Kotlin for Java Developers", el cual fortalece conocimientos en programación orientada a 
+        objetos utilizando Kotlin, enfocándose en su interoperabilidad con Java, buenas prácticas en el desarrollo d
+        e aplicaciones Android, uso de Android Studio e IntelliJ IDEA, pruebas unitarias y principios modernos de desarrollo. Este curso proporciona
+         una base sólida para migrar o complementar proyectos Java con Kotlin 
+         de manera eficiente y profesional.`,
+        image: "/achievements/kotlinJavaJetbrains.webp",
+        alt: "Kotlin for Java Developers certificate",
+        tags: [TAGS.aws],
+        imageClass: "",
+        externalLink:"https://www.coursera.org/account/accomplishments/verify/MK4HUMU2B80W"
+    },
+    {
+        title: "Create the User Interface with SwiftUI",
+        subtitle: "Meta / Coursera",
+        date: "May 2025 - May 2028",
+        description: `Certificación emitida por Meta a
+         través de Coursera que valida conocimientos avanzados 
+         en desarrollo con Swift, incluyendo la implementación de aplicaciones iOS con capacidades de búsqueda 
+         y filtrado, la creación de tipos de datos personalizados, el uso de pruebas unitarias con mocks y fakes, 
+         así como buenas prácticas de organización de código utilizando herencia, protocolos y delegación. Esta formación refuerza habilidades en patrones de diseño, testing de software,
+         programación orientada a objetos y desarrollo funcional aplicados al entorno de desarrollo de Apple con Xcode.`,
+        image: "/achievements/swiftUIMeta.webp",
+        alt: "Create the User Interface with SwiftUI certificate",
+        tags: [TAGS.aws],
+        imageClass: "",
+        externalLink:"https://www.coursera.org/account/accomplishments/verify/LTAV3L1BROD3"
+    },
+]
+---
+
+<ul>
+    {
+        achievements.map(achievement => (
+            <li class="py-12">
+                <AchievementItem {...achievement}/>
+            </li>
+        ))
+    }
+</ul>

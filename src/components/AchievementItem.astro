@@ -1,0 +1,32 @@
+---
+import { TAGS } from "./TAGS.astro"
+interface Props {
+    title: string;
+    subtitle: string;
+    date: string;
+    description: string;
+    image: string;
+    alt: string;
+    tags: typeof TAGS[];
+    imageClass: string;
+    externalLink: string;
+    link?: string;
+} 
+
+const { title, subtitle, date, description, image, alt, externalLink, imageClass } = Astro.props;
+---
+
+
+
+<h3 class="flex flex-col items-start gap-2 text-xl font-semibold text-gray-900 dark:text-white">{title} 
+    <span class="text-lg font-light text-gray-500 dark:text-white">{subtitle}</span>   
+    <span class="text-sm font-light text-gray-500 dark:text-gray-300 -mt-2">{date}</span>   
+    <div class="h-[2px] bg-gray-300 dark:bg-gray-300 w-[15rem] mb-2"></div>
+</h3>
+<div class="flex gap-20 items-center pt-4">
+    <img src={image} alt={alt} class={`w-60 py-2 ${imageClass}`}>
+    <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 text-pretty">{description}</p>
+</div>
+
+
+

@@ -15,6 +15,7 @@ import Projects from './Projects.astro';
 import Education from './Education.astro';
 import Contact from './Contact.astro';
 import Technologies from './Technologies.astro';
+import Achievements from './Achievements.astro';
 ---
 
 <div id="section-label"
@@ -56,7 +57,18 @@ import Technologies from './Technologies.astro';
 			transition-all duration-300 hover:bg-blue-300 hover:text-black"
 			>Construyamos algo juntos</a>
 	</div>
-		<img src="me.webp" alt="imagen ricardo molina" class="rounded-full object-cover w-92 h-92 mb-10 lg:mb-0">
+		<!-- Bloque derecho con imagen + ubicación -->
+		<div class="flex flex-col items-center justify-center gap-2 mb-10 lg:mb-0">
+			<div class="w-96 h-96">
+			  <img src="me.webp"
+				   alt="imagen ricardo molina"
+				   class="w-full h-full object-cover rounded-full" />
+			</div>
+			<span class="text-lg font-medium text-gray-500 dark:text-gray-300">Guayaquil, Ecuador</span>
+		  </div>
+  
+	
+
 </SectionContainer>
 	<SectionContainer id="experience" data-label="Experiencia" class="py-44">
 		<h2 class="flex flex-col lg:flex-row gap-2 pb-3 lg:gap-5 text-3xl font-semibold text-center justify-center items-center lg:justify-start mb-5">
@@ -85,6 +97,13 @@ import Technologies from './Technologies.astro';
 			<CodeIcon class="size-8"/>
 			Tecnologías</h2>
 		<Technologies />
+	</SectionContainer>
+
+	<SectionContainer id="achievements" data-label="Logros" class="py-44">
+		<h2 class="flex flex-col lg:flex-row gap-2 pb-3 lg:gap-5 text-3xl font-semibold text-center justify-center items-center lg:justify-start mb-5">
+			<CodeIcon class="size-8"/>
+			Logros</h2>
+		<Achievements />
 	</SectionContainer>
 
 	<SectionContainer id="contact" data-label="Contacto" class="pt-5 min-h-[calc(100vh-12rem)]">
