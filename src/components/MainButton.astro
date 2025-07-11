@@ -1,0 +1,47 @@
+---
+import GradientButton from "./GradientButton.astro";
+import AwardIcon from "../icons/Award.astro"
+import ArrowRightIcon from "../icons/ArrowRight.astro"
+import ChevronIcon from "../icons/Chevron.astro";
+import { TAGS } from "./TAGS.astro"
+
+interface Props {
+    link: string;
+    label: string;
+    gradient: string;
+    className: string
+} 
+
+const {  link, label, gradient, className } = Astro.props;
+---
+
+
+
+    <a href={link} class={`group relative ${className}`}>
+
+        <div class="relative border border-blue-300 px-4 py-2 rounded-full text-center  font-medium hover:animate-pulse overflow-hidden w-100">
+            <span class="relative flex items-center justify-center text-white group-hover:text-white z-20">{label}</span>
+            <span class="absolute top-1/2 -left-5 -translate-y-1/2 w-5 h-5 z-12 transition-all group-hover:translate-x-120 duration-500">
+                <ChevronIcon class="text-gray-100 size-5" />
+              </span>
+            <span class="absolute inset-0 w-full h-full transition duration-300 z-10 ease-out transform scale-0 origin-left bg-gradient-to-r from-gray-800 to-gray-600 group-hover:scale-100 rounded-lg"></span>
+            <div class="absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 group-hover:translate-x-90
+            transition-all duration-1500 bg-gradient-to-r from-blue-500 to-blue-300 clip-triangle z-15 shadow-2xl">
+            </div>
+        </div>
+
+
+ 
+
+      </a>
+
+
+
+      <style>
+        .clip-triangle {
+          clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+        }
+        .clip-triangle-shadow {
+          clip-path: polygon(0% 0%, 100% 65%, 0% 100%);
+        }
+      </style>

@@ -1,5 +1,8 @@
 ---
+import GradientButton from "./GradientButton.astro";
+import AwardIcon from "../icons/Award.astro"
 import { TAGS } from "./TAGS.astro"
+
 interface Props {
     title: string;
     subtitle: string;
@@ -13,7 +16,7 @@ interface Props {
     link?: string;
 } 
 
-const { title, subtitle, date, description, image, alt, externalLink, imageClass } = Astro.props;
+const { title, subtitle, date, description, image, alt, externalLink, imageClass, link } = Astro.props;
 ---
 
 
@@ -25,7 +28,16 @@ const { title, subtitle, date, description, image, alt, externalLink, imageClass
 </h3>
 <div class="flex gap-20 items-center pt-4">
     <img src={image} alt={alt} class={`w-60 py-2 ${imageClass}`}>
-    <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 text-pretty">{description}</p>
+    <div class="flex flex-col gap-2">
+    <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 text-pretty">
+        {description}
+    </p>
+
+    {externalLink && (
+        <GradientButton link={externalLink} label="Ver certificado" gradient="bg-gradient-to-r from-gray-900 to-gray-700 hover:bg-gradient-to-r hover:from-gray-800 hover:to-gray-600 transition-colors duration-500"><AwardIcon class="text-gray-700 pl-1"></AwardIcon></GradientButton>
+        
+    )}
+</div>
 </div>
 
 

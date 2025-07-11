@@ -4,7 +4,10 @@ import background from '../assets/background.svg';
 import LinkedInIcon from '../icons/LinkedIn.astro';
 import GitHubIcon from '../icons/GitHub.astro';
 import ReactIcon from '../icons/React.astro';
-import AstroIcon from '../icons/Astro.astro';
+import AstroIcon from '../icons/technologies/Astro.astro';
+import PenIcon from '../icons/Pen.astro';
+import PCIcon from '../icons/PC.astro';
+import RosetteIcon from '../icons/Rosette.astro';
 import DeskIcon from '../icons/Desk.astro';
 import MainIcons from './MainIcons.astro';
 import ToolPills from './ToolsPill.astro';
@@ -16,13 +19,14 @@ import Education from './Education.astro';
 import Contact from './Contact.astro';
 import Technologies from './Technologies.astro';
 import Achievements from './Achievements.astro';
+import MainButton from './MainButton.astro';
 ---
 
 <div id="section-label"
      class="fixed left-1/16 top-9/12 -translate-y-1/2 z-50 hidden lg:block
             text-lg tracking-widest font-bold rotate-[-90deg] origin-left pl-4
             text-white transition-all duration-500 ease-in-out">
-  <span class="transition-all duration-500 ease-in-out block opacity-100 translate-y-0 text-5xl font-semibold text-gray-500/50">
+  <span class="transition-all duration-500 ease-in-out block opacity-100 translate-y-0 text-6xl font-semibold text-gray-500/50">
     
   </span>
 </div>
@@ -51,11 +55,7 @@ import Achievements from './Achievements.astro';
 			</ToolPills> -->
 
 	</div>
-		<a href="/" 
-		class="text-center 
-			border border-blue-300 px-4 py-2 rounded-full w-72
-			transition-all duration-300 hover:bg-blue-300 hover:text-black"
-			>Construyamos algo juntos</a>
+		<MainButton link="#experience" label="Construyamos algo juntos" gradient="bg-gradient-to-r from-gray-900 to-gray-700" className="pt-8"/>
 	</div>
 		<!-- Bloque derecho con imagen + ubicación -->
 		<div class="flex flex-col items-center justify-center gap-2 mb-10 lg:mb-0">
@@ -65,6 +65,7 @@ import Achievements from './Achievements.astro';
 				   class="w-full h-full object-cover rounded-full" />
 			</div>
 			<span class="text-lg font-medium text-gray-500 dark:text-gray-300">Guayaquil, Ecuador</span>
+			<span class="text-lg font-medium text-gray-500 dark:text-gray-300 -mt-3">23 años</span>
 		  </div>
   
 	
@@ -86,7 +87,7 @@ import Achievements from './Achievements.astro';
 
 	<SectionContainer id="education" data-label="Educación" class="py-44">
 		<h2 class="flex flex-col lg:flex-row gap-2 pb-3 lg:gap-5 text-3xl font-semibold text-center justify-center items-center lg:justify-start mb-5">
-			<CodeIcon class="size-8"/>
+			<PenIcon class="size-8"/>
 			Educación</h2>
 		<Education />
 	</SectionContainer>
@@ -94,14 +95,14 @@ import Achievements from './Achievements.astro';
 	
 	<SectionContainer id="technologies" data-label="Tecnologías" class="py-44">
 		<h2 class="flex flex-col lg:flex-row gap-2 pb-3 lg:gap-5 text-3xl font-semibold text-center justify-center items-center lg:justify-start mb-5">
-			<CodeIcon class="size-8"/>
+			<PCIcon class="size-8"/>
 			Tecnologías</h2>
 		<Technologies />
 	</SectionContainer>
 
 	<SectionContainer id="achievements" data-label="Logros" class="py-44">
 		<h2 class="flex flex-col lg:flex-row gap-2 pb-3 lg:gap-5 text-3xl font-semibold text-center justify-center items-center lg:justify-start mb-5">
-			<CodeIcon class="size-8"/>
+			<RosetteIcon class="size-8"/>
 			Logros</h2>
 		<Achievements />
 	</SectionContainer>
