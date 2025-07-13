@@ -24,7 +24,7 @@ const achievements = [
         alt: "English C1 proficiency certification",
         tags: [TAGS.aws],
         imageClass: "",
-        externalLink:"https://www.credly.com/badges/4d0622da-437d-4893-a262-1562282cd203/linked_in_profile"
+        externalLink:"https://drive.google.com/file/d/1Bai1XLZMlBIkFFV2HnpuOXr2ZV-klNMf/view?usp=drive_link"
     },    
     {
         title: "Mentoring Program",
@@ -85,13 +85,82 @@ const achievements = [
         imageClass: "",
         externalLink:"https://www.coursera.org/account/accomplishments/verify/LTAV3L1BROD3"
     },
+    {
+        title: "Curso de PostgreSQL",
+        subtitle: "Platzi",
+        date: "Abr 2025 - Abr 2026",
+        description: `Certificación emitida por Platzi que acredita conocimientos en el manejo de bases de datos relacionales con PostgreSQL, incluyendo diseño de esquemas, consultas SQL avanzadas, 
+        optimización de rendimiento y administración de bases de datos.`,
+        image: "/achievements/postgress_platzi.webp",
+        alt: "PostgreSQL certificate",
+        tags: [TAGS.aws],
+        imageClass: "",
+        externalLink:"https://platzi.com/p/ricardoduvalmolinacoronel/curso/1480-postgresql/diploma/detalle/"
+    },
+    {
+        title: "Curso de Java Spring",
+        subtitle: "Platzi",
+        date: "Abr 2025 - Abr 2026",
+        description: `Certificación emitida por Platzi que valida competencias 
+        en el desarrollo de aplicaciones backend con Java utilizando el framework Spring,
+         incluyendo conceptos como inyección de dependencias, desarrollo de APIs RESTful, 
+        manejo de bases de datos y buenas prácticas de arquitectura de software.`,
+        image: "/achievements/spring_platzi.webp",
+        alt: "Java Spring certificate",
+        tags: [TAGS.aws],
+        imageClass: "",
+        externalLink:"https://platzi.com/p/ricardoduvalmolinacoronel/curso/1996-java-spring/diploma/detalle/"
+    },
+    {
+        title: "Curso de Java Spring Data JPA: Bases de datos",
+        subtitle: "Platzi",
+        date: "Abr 2025 - Abr 2026",
+        description: `Certificación emitida por Platzi que respalda conocimientos 
+        en el uso de Spring Data JPA para la gestión eficiente de bases de datos en 
+        aplicaciones Java, incluyendo mapeo objeto-relacional (ORM), creación de 
+        repositorios, consultas personalizadas y prácticas recomendadas para 
+        persistencia de datos.`,
+        image: "/achievements/jpa_platzi.webp",
+        alt: "Curso de Java Spring Data JPA: Bases de datos certificate",
+        tags: [TAGS.aws],
+        imageClass: "",
+        externalLink:"https://platzi.com/p/ricardoduvalmolinacoronel/curso/7825-java-spring-data/diploma/detalle/"
+    },
+    {
+        title: "Curso de Docker: Fundamentos",
+        subtitle: "Platzi",
+        date: "Abr 2025 - Abr 2026",
+        description: `Certificación emitida por Platzi que acredita conocimientos 
+        fundamentales en Docker, incluyendo la creación y administración de contenedores,
+         definición de imágenes personalizadas, 
+        uso de Dockerfiles y gestión de entornos de desarrollo portables y escalables.`,
+        image: "/achievements/docker_platzi.webp",
+        alt: "Docker Fundamentos certificate",
+        tags: [TAGS.aws],
+        imageClass: "",
+        externalLink:"https://platzi.com/p/ricardoduvalmolinacoronel/curso/8781-docker-fundamentos/diploma/detalle/"
+    },
+    {
+        title: "Curso de Kubernetes",
+        subtitle: "Platzi",
+        date: "Abr 2025 - Abr 2026",
+        description: `Certificación emitida por Platzi que valida 
+        conocimientos en la 
+        orquestación de contenedores con Kubernetes, abarcando conceptos 
+        clave como despliegue de aplicaciones, gestión de clústeres, configuración de servicios, escalabilidad automática y monitoreo de recursos.`,
+        image: "/achievements/kubernetes_platzi.webp",
+        alt: "Kubernetes certificate",
+        tags: [TAGS.aws],
+        imageClass: "",
+        externalLink:"https://platzi.com/p/ricardoduvalmolinacoronel/curso/11421-course/diploma/detalle/"
+    }
 ]
 ---
 
 <ul>
     {
         achievements.map(achievement => (
-            <li class="py-12">
+            <li class="lg:py-12 py-10">
                 <AchievementItem {...achievement}/>
             </li>
         ))

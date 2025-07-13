@@ -21,7 +21,7 @@ const educations = [
          contribuir a mejorar la experiencia humana en distintos contextos tecnológicos.`,
         image: "/logos/unir.webp",
         alt: "Unir",
-        imageClass: "w-90",
+        imageClass: "lg:w-90 w-60",
         link:"/",
         externalLink: "https://www.unir.net/ingenieria/master-inteligencia-artificial/"
     },
@@ -32,7 +32,7 @@ const educations = [
         description: "Durante mi formación como Ingeniero en Ciencias de la Computación en ESPOL, adquirí una preparación integral en distintas áreas del desarrollo de software y las tecnologías de la información. Esta formación me permitió desarrollar un dominio sólido de la Programación Orientada a Objetos y las Estructuras de Datos, fundamentales para crear soluciones escalables y sostenibles. Asimismo, fortalecí mis conocimientos en Diseño de Software y Sistemas de Bases de Datos, competencias clave para construir aplicaciones eficientes y confiables. A través de materias como Programación de Sistemas, Sistemas Operativos y Análisis de Algoritmos, perfeccioné mi capacidad para diseñar sistemas de alto rendimiento y optimización. También incursioné en el desarrollo web y móvil, adquiriendo experiencia en la creación de interfaces funcionales y adaptativas. La Seguridad de la Información formó parte esencial de mis estudios, brindándome las herramientas necesarias para salvaguardar datos y sistemas. El aprendizaje de diversos Lenguajes de Programación me permitió adaptarme a distintos entornos tecnológicos. Además, profundicé en áreas como Ingeniería de Software, Inteligencia Artificial, Sistemas Distribuidos y Computación en la Nube, que me proporcionaron una visión completa sobre el diseño de soluciones inteligentes y distribuidas. Finalmente, mi formación incluyó la Gestión de Proyectos de TI y Sistemas de Información, lo que me preparó para liderar iniciativas tecnológicas y gestionar eficazmente los recursos informáticos en contextos organizacionales.",
         image: "/logos/espol1.webp",
         alt: "ESPOL",
-        imageClass: "w-90",
+        imageClass: "lg:w-90 w-60",
         link:"/",
         externalLink: "https://www.fiec.espol.edu.ec/en/undergraduate-programs/computer-science"
     },
@@ -49,7 +49,7 @@ const educations = [
         `,
         image: "/logos/santistevan.webp",
         alt: "Santistevan",
-        imageClass: "w-20",
+        imageClass: "lg:w-20 w-16",
         link:"/",
         externalLink: "https://santistevan.edu.ec/"
     }
@@ -57,10 +57,10 @@ const educations = [
 
 ---
 
-<ol class="relative border-s border-gray-200 dark:border-gray-200 ml-4">
+<ol class="relative border-s border-gray-200 dark:border-gray-200 lg:ml-4">
     {
         educations.map(education => (
-        <li class="mb-10 ms-4">
+        <li class="lg:mb-10 mb-5 ms-4">
         <EducationItem {...education}/>
 
         </li>

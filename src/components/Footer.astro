@@ -1,8 +1,10 @@
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
-<footer class="fixed bottom-0 left-0 py-0.5 w-full flex justify-center items-center z-50 bg-gray-900/90 backdrop-blur-3xl gap-4 text-white text-sm">
-    Desarrollado con cariño por Ricardo Molina
-    <lottie-player
+<footer class="fixed bottom-0 left-0 lg:px-0 px-1 w-full flex justify-center items-center z-50 bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-3xl gap-4 text-white text-sm font-semibold">
+  <span class="block lg:hidden">Desarrollado por Ricardo Molina</span>
+
+  <!-- Texto para pantallas grandes -->
+  <span class="hidden lg:block">Desarrollado con cariño por Ricardo Molina</span>    <lottie-player
     src="/animations/CatPC.json"
     background="transparent"
     speed="1"

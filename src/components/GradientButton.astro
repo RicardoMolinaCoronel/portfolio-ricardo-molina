@@ -5,11 +5,11 @@ const { label, gradient, link, className, square } = Astro.props;
 <a target="_blank"
 rel="noopener noreferrer"
 href={link} 
-class={`group relative inline-block w-fit hover:scale-105 transition duration-300 cursor-pointer ${className} ${square ? 'w-20' : 'w-50'}`}>
+class={`group relative inline-block w-fit hover:scale-105 active:scale-110 transition duration-300 cursor-pointer ${className} ${square ? 'w-20' : 'w-50'}`}>
   <!-- Contenedor redondeado principal -->
   <div class={`flex w-50 py-3 items-center rounded-full shadow-xl transition-all ${gradient}`}>
     <!-- Texto -->
-    <span class=" pl-13 pr-1 text-white text-sm font-semibold">{label}</span>
+    <span class=" pl-13 pr-1 text-white lg:text-sm text-xs font-semibold">{label}</span>
   </div>
 
 

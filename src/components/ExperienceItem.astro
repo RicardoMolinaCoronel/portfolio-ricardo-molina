@@ -15,12 +15,12 @@ const { title, date, description, image, alt, link } = Astro.props;
 <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-white dark:bg-gray-200"></div>
 <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-200">{date}</time>
 
-    <h3 class="flex flex-col items-start gap-2 text-lg font-semibold text-gray-900 dark:text-white">{title}    
+    <h3 class="flex flex-col items-start gap-2 lg:text-lg text-base font-semibold text-gray-900 dark:text-white">{title}    
         <div class="h-[2px] bg-gray-300 dark:bg-gray-300 w-1/8 mb-2"></div>
     </h3>
   
-<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400 text-pretty">{description}</p>
-<img src={image} alt={alt} class="w-45 rounded-2xl py-2">
+<p class="mb-4 lg:text-base text-sm font-normal text-gray-500 dark:text-gray-400 text-pretty">{description}</p>
+<img src={image} alt={alt} class="lg:w-45 w-32 rounded-2xl py-2">
 {
     link && (
         <a target="_blank"

@@ -21,15 +21,15 @@ const { title, subtitle, date, description, image, alt, externalLink, imageClass
 
 
 
-<h3 class="flex flex-col items-start gap-2 text-xl font-semibold text-gray-900 dark:text-white">{title} 
-    <span class="text-lg font-light text-gray-500 dark:text-white">{subtitle}</span>   
-    <span class="text-sm font-light text-gray-500 dark:text-gray-300 -mt-2">{date}</span>   
-    <div class="h-[2px] bg-gray-300 dark:bg-gray-300 w-[15rem] mb-2"></div>
+<h3 class="flex flex-col items-start gap-2 lg:text-xl text-lg font-semibold text-gray-900 dark:text-white">{title} 
+    <span class="lg:text-lg text-base font-light text-gray-500 dark:text-white">{subtitle}</span>   
+    <span class="lg:text-sm text-xs font-light text-gray-500 dark:text-gray-300 -mt-2">{date}</span>   
+    <div class="h-[2px] bg-gray-300 dark:bg-gray-300 lg:w-[15rem] w-30 mb-2"></div>
 </h3>
-<div class="flex gap-20 items-center pt-4">
-    <img src={image} alt={alt} class={`w-60 py-2 ${imageClass}`}>
+<div class="flex lg:flex-row flex-col lg:gap-20 gap-5 items-center pt-4">
+    <img src={image} alt={alt} class={`lg:w-60 w-50 lg:py-3 py-2 ${imageClass}`}>
     <div class="flex flex-col gap-2">
-    <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 text-pretty">
+    <p class="mb-4 text-sm lg:text-base font-normal text-gray-500 dark:text-gray-300 text-pretty">
         {description}
     </p>
 

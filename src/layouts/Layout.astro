@@ -2,6 +2,8 @@
 
 import '@fontsource-variable/fira-code'
 import Header from '../components/Header.astro'
+import HeaderReact from "../components/Header.jsx";
+
 import Footer from '../components/Footer.astro'
 import './src/styles/global.css'
 
@@ -15,7 +17,7 @@ const { title, description } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/logo_circular_suave.webp" type="image/webp" sizes="any">
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={description}>
 		<title>{title}</title>
@@ -26,7 +28,7 @@ const { title, description } = Astro.props;
 			<div class="absolute top-[-10%] left-1/2 transform -translate-x-1/2 h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#000)]"></div>
 		</div>
 		<div class="relative z-10">
-			<Header />
+			<HeaderReact client:load />
 			<slot />
 			<Footer />
 		</div>
@@ -49,6 +51,7 @@ const { title, description } = Astro.props;
 		flex-direction: column;
 		justify-content: center;
 		min-height: 100vh;
+
 	}
 	
 	@media (prefers-reduced-motion: reduce){

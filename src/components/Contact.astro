@@ -10,44 +10,44 @@ import GithubIcon from "../icons/technologies/Github.astro";
 import AnimationContact from "../icons/AnimationContact.astro";
 ---
 <div class="flex flex-col gap-6 justify-center items-center">
-    <h2 class="text-3xl font-semibold text-gray-900 dark:text-white flex items-center gap-4 flex-row">
-        <AnimationContact class="size-14 -mb-2 -mt-2" />
+    <h2 class="lg:text-4xl text-3xl font-semibold text-gray-900 dark:text-white flex items-center gap-4 flex-row">
+        <AnimationContact class="lg:size-14 size-18 -mb-2 -mt-2" />
         Pongámonos en contacto!
 
     </h2>
-<ToolsPill divClass="justify-between px-10 mt-3">
+<ToolsPill divClass="flex flex-col lg:flex-row justify-between lg:px-10 px-3 lg:py-1 py-3 mt-3 lg:gap-0 gap-5">
     
-    <div class="flex items-center gap-2">
-    <a href="mailto:ricardoduvalmolinacoronel@gmail.com" title="Enviar correo" class="hover:scale-120 transition-all duration-300">
-        <GmailIcon class="size-6 text-white" />
+    <div class="flex lg:flex-row flex-col items-center lg:gap-2 gap-0.5">
+    <a href="mailto:ricardoduvalmolinacoronel@gmail.com" title="Send email" class="hover:scale-120 transition-all duration-300">
+        <GmailIcon class="lg:size-6 size-9 text-white" />
       </a>    
-    <span class="text-white mr-4">ricardoduvalmolinacoronel@gmail.com</span>
+    <span class="text-white lg:mr-4 mr-1 lg:text-base text-sm font-semibold">ricardoduvalmolinacoronel@gmail.com</span>
     </div>
     
 <div class="flex items-center gap-2">
-    <a href="mailto:ricardoduvalmolinacoronel@gmail.com" title="Enviar correo" class="hover:text-blue-300 transition-all duration-300">
-        <MailIcon class="size-6 " />
+    <a href="mailto:ricardoduvalmolinacoronel@gmail.com" title="Send email" class="hover:text-blue-300 transition-all duration-300">
+        <MailIcon class="lg:size-6 size-7" />
       </a>  
-      <button class="copy-btn ml-2" data-copy="ricardoduvalmolinacoronel@gmail.com" title="Copiar correo">
+      <button class="copy-btn ml-2 " data-copy="ricardoduvalmolinacoronel@gmail.com" title="Copy email">
         <span class="icon-wrapper relative">
-            <span class="copy-icon block cursor-copy hover:text-blue-300 transition-all duration-300"><CopyIcon /></span>
-            <span class="check-icon hidden text-green-500 "><CopyCheckIcon /></span>
+            <span class="copy-icon block cursor-copy hover:text-blue-300 transition-all duration-300"><CopyIcon class="lg:size-6 size-7" /></span>
+            <span class="check-icon hidden text-green-500 "><CopyCheckIcon class="lg:size-6 size-7" /></span>
           </span>
         </button>
     </div>
 
 </ToolsPill>
 
-<ToolsPill divClass="justify-between px-10">
-    <div class="flex items-center gap-2">
-    <PhoneIcon class="size-6" />
-    <span class="text-white">+593 0988975302</span>
+<ToolsPill divClass="flex flex-col lg:flex-row justify-between lg:px-10 px-3 lg:py-1 py-3 lg:gap-0 gap-5">
+    <div class="flex lg:flex-row flex-col items-center lg:gap-2 gap-0.5">
+    <PhoneIcon class="lg:size-6 size-9" />
+    <span class="text-white lg:mr-4 lg:text-base text-sm font-semibold">+593 0988975302</span>
 </div>
 <div class="flex items-center gap-2">
-      <button class="copy-btn ml-2" data-copy="+593 0988975302" title="Copiar numero">
+      <button class="copy-btn lg:ml-2" data-copy="+593 0988975302" title="Copy number">
         <span class="icon-wrapper relative">
-            <span class="copy-icon block cursor-copy hover:text-blue-300 transition-all duration-300"><CopyIcon /></span>
-            <span class="check-icon hidden text-green-500"><CopyCheckIcon /></span>
+            <span class="copy-icon block cursor-copy hover:text-blue-300 transition-all duration-300"><CopyIcon class="lg:size-6 size-7" /></span>
+            <span class="check-icon hidden text-green-500"><CopyCheckIcon class="lg:size-6 size-7 " /></span>
           </span>
         </button>
     </div>
