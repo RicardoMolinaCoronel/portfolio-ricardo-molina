@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 
 import NavLink from "./NavLinkReact";
+import { useTranslations} from '../utils/i18n';
+
+
 
 const Header = ({ lang }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,6 +29,7 @@ const Header = ({ lang }) => {
     document.documentElement.classList.toggle("dark", newTheme);
     localStorage.setItem("theme", newTheme ? "dark" : "light");
   };
+  const t = useTranslations(lang);
 
   return (
     <header className="sticky top-0 z-50 backdrop-blur-2xl w-full lg:py-1 lg:flex lg:flex-row lg:items-center lg:justify-between lg:px-32 border-b border-gray-500 dark:border-gray-500 ">
@@ -71,13 +75,13 @@ const Header = ({ lang }) => {
 
       {/* Navegación desktop */}
       <nav className="hidden lg:flex flex-row justify-center gap-x-6 opacity-90 text-sm">
-        <NavLink href="#">Inicio</NavLink>
-        <NavLink href="#experience">Experiencia</NavLink>
-        <NavLink href="#projects">Proyectos</NavLink>
-        <NavLink href="#education">Educación</NavLink>
-        <NavLink href="#technologies">Tecnologías</NavLink>
-        <NavLink href="#achievements">Logros</NavLink>
-        <NavLink href="#contact">Contacto</NavLink>
+        <NavLink href="#">{t.sections.home}</NavLink>
+        <NavLink href="#experience">{t.sections.experience}</NavLink>
+        <NavLink href="#projects">{t.sections.projects}</NavLink>
+        <NavLink href="#education">{t.sections.education}</NavLink>
+        <NavLink href="#technologies">{t.sections.technologies}</NavLink>
+        <NavLink href="#achievements">{t.sections.achievements}</NavLink>
+        <NavLink href="#contact">{t.sections.contact}</NavLink>
 
       </nav>
 
@@ -95,7 +99,7 @@ const Header = ({ lang }) => {
         {/* Encabezado Sidebar */}
         <div className="mb-6 mt-2 flex items-center gap-2 ">
           <img src="/logo_circular.webp" className="w-12 h-17"/>
-          <span className="text-lg font-semibold">Menú</span>
+          <span className="text-lg font-semibold">{t.sections.menu}</span>
         </div>
 
         <hr className="border-gray-300 dark:border-gray-700 pb-6" />
@@ -103,13 +107,13 @@ const Header = ({ lang }) => {
         {/* Menú */}
         <ul className="flex flex-col gap-4 text-base font-medium text-gray-800 dark:text-white">
           {[
-            ["#", "Inicio", <HomeIcon />],
-            ["#experience", "Experiencia", <DeskIcon />],
-            ["#projects", "Proyectos", <CodeIcon />],
-            ["#education", "Educación", <PenIcon />],
-            ["#technologies", "Tecnologías", <PCIcon />],
-            ["#achievements", "Logros", <RosetteIcon />],
-            ["#contact", "Contacto", <MailIcon />]
+            ["#", t.sections.home, <HomeIcon />],
+            ["#experience", t.sections.experience, <DeskIcon />],
+            ["#projects", t.sections.projects, <CodeIcon />],
+            ["#education", t.sections.education, <PenIcon />],
+            ["#technologies", t.sections.technologies, <PCIcon />],
+            ["#achievements", t.sections.achievements, <RosetteIcon />],
+            ["#contact", t.sections.contact, <MailIcon />]
           ].map(([href, label, icon]) => (
             <li key={label}>
               <a

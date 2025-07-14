@@ -1,10 +1,17 @@
+---
+import { useTranslations, getLangFromUrl } from '../utils/i18n';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
 <footer class="fixed bottom-0 left-0 lg:px-0 px-1 w-full flex justify-center items-center z-50 bg-gradient-to-br dark:from-gray-800/90 dark:to-gray-700/90 from-gray-400/90 to-gray-300/90 backdrop-blur-3xl gap-4 text-sm font-semibold">
-  <span class="block lg:hidden">Desarrollado por Ricardo Molina</span>
+  <span class="block lg:hidden">{t.hero.footer}</span>
 
   <!-- Texto para pantallas grandes -->
-  <span class="hidden lg:block">Desarrollado con cariño por Ricardo Molina</span>    <lottie-player
+  <span class="hidden lg:block">{t.hero.footer}</span>    <lottie-player
     src="/animations/CatPC.json"
     background="transparent"
     speed="1"

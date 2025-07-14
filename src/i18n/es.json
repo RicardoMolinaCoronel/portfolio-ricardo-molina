@@ -1,15 +1,72 @@
 {
+  "technologiesSTR": "Tecnologías",
     "hero": {
       "title": "Soy Ricardo Molina",
-      "subtitle": "Ingeniero en Ciencias Computacionales con experiencia en desarrollo fullstack, móvil e inteligencia artificial",
-      "cta": "Construyamos algo juntos"
+      "subtitle1": "Ingeniero en Ciencias Computacionales con",
+      "subtitle2": "experiencia en desarrollo fullstack, móvil e inteligencia artificial",
+      "cta": "Construyamos algo juntos",
+      "menu": "Menú",
+      "age": "23 años",
+      "location": "Guayaquil, Ecuador",
+      "footer": "Desarrollado por Ricardo Molina"
     },
     "sections": {
+      "home": "Inicio",
       "experience": "Experiencia",
       "projects": "Proyectos",
       "education": "Educación",
       "technologies": "Tecnologías",
       "achievements": "Logros",
       "contact": "Contacto"
+    },
+    "experience": {
+      "bdp": {
+        "title": "Banco del Pacífico",
+        "subtitle": "Desarrollador móvil",
+        "date": "Mayo 2025 - Actualidad",
+        "description": "Me encuentro encargado de la migración de la aplicación móvil Intranet para funcionarios del banco de su versión en Xamarin a su versión en Swift y SwiftUI para dispositivos iOS, además de dar mantenimiento a la versión Android de esta misma aplicación, hecha en Kotlin con Jetpack Compose."
+      },
+      "retailPoint": {
+        "title": "RetailPoint del Ecuador",
+        "subtitle": "Desarrollador de software",
+        "date": "Febrero 2022 - Mayo 2025",
+        "description": "Como desarrollador de software, he desempeñado roles tanto técnicos como de liderazgo en proyectos de desarrollo frontend, backend y aplicaciones móviles. He participado en la creación de soluciones móviles y de escritorio utilizando Java y Kotlin, integrando funcionalidades de interacción con hardware RFID y dispositivos de seguridad. Además, he desarrollado aplicaciones web con tecnologías como React.js, Firebase y Node.js, enfocadas en la gestión de inventario y control de ventas. También he contribuido en diversos proyectos backend utilizando frameworks como Express.js, Spring Boot y Laravel."
+      },
+      "espol": {
+        "title": "Ayudante de Investigación",
+        "subtitle": "Ingeniero de datos y machine learning",
+        "date": "Febrero 2022",
+        "description": "Como ayudante de investigación, participé activamente en la ejecución de experimentos y elaboración de reportes en dos proyectos enfocados en el diagnóstico de enfermedades mediante ingeniería de datos e inteligencia artificial. En el primer estudio, analizamos datos clínicos tabulares de pacientes utilizando siete modelos de machine learning para predecir el riesgo de sufrir ataques cardíacos. En la segunda investigación, evaluamos diez modelos de machine learning y deep learning para estimar el riesgo de padecer la enfermedad de Parkinson, empleando datos de sensores IMU capturados durante pruebas de marcha en línea recta. Obtuvimos resultados prometedores, alcanzando hasta un 93.79% de precisión. Actualmente, un artículo con los hallazgos de esta investigación se encuentra en proceso de publicación en ACM journals."
+      }
+    },
+    "projects":{
+      "intranet":{
+        "title": "Intranet BdP",
+        "description": "Intranet BdP es un aplicativo móvil hecho para los funcionarios de banco del pacífico, con funciones como búsqueda de información del trabajador, consulta de horarios y menús de las cafeterías y restaurantes de su matriz correspondiente, y demás procesos autorizados para cada funcionario según su puesto"
+      },
+      "analyticsAdmin":{
+        "title": "Analytics Admin",
+        "description": "Analytics Admin es una aplicación web diseñada para visualizar y administrar un panel de control con métricas clave sobre el flujo de entrada y salida de clientes en los locales de la empresa, así como indicadores de conversión y otros KPIs relevantes. El sistema obtiene datos procesados por cámaras con inteligencia artificial a través de un backend, los cuales se almacenan en una base de datos y se combinan con archivos de facturación y otros registros de la empresa que utiliza el servicio."
+      },
+      "suplaierWeb":{
+        "title": "Suplaier Web",
+        "description": "Suplaier Web es la versión web del sistema Suplaier, diseñada para facilitar la interacción entre vendedores y compradores desde dispositivos móviles. La aplicación permite a los vendedores publicar ofertas de productos disponibles, mientras que los compradores pueden unirse a dichas ofertas, incluyendo modalidades como las ofertas cooperativas, que brindan descuentos a cambio de un mayor tiempo de espera. Asimismo, la plataforma incorpora una funcionalidad de demanda de productos, donde los compradores publican sus necesidades y los vendedores presentan sus propuestas, permitiendo a los compradores seleccionar la oferta más conveniente."  
+      },
+      "suplaierMobile":{
+        "title": "Suplaier Mobile",
+        "description": "Suplaier Mobile es la versión móvil del sistema Suplaier, diseñada para facilitar la interacción entre vendedores y compradores desde dispositivos móviles. Posee las mismas funcionalidades que la versión web, pero con una interfaz adaptada a estos dispositivos."
+      },
+      "clearInventory":{
+        "title": "Clear Inventory",
+        "description": "Clear Inventory es una aplicación móvil en Android con interacción con hardware RFID, orientada al control de inventarios tanto de activos fijos empresariales como de productos en stock, con más de 6 versiones distintas, adaptadas a cada cliente y sus necesidades específicas. Integra tecnología RFID para la lectura de etiquetas, lo que permite relacionar la información obtenida con archivos o bases de datos asociadas a los productos. Entre sus funcionalidades destacan la generación de reportes, envío de correos electrónicos, exportación de datos en formato CSV, visualización del inventario en tiempo real, entre otras herramientas de gestión avanzadas."
+      },
+      "parkinsonResearch":{
+        "title": "Parkinson Disease Research",
+        "description": "Este proyecto de investigación se centra en el estudio de la enfermedad de Parkinson, mediante el análisis de datos recolectados con sensores inerciales (IMU) durante pruebas de marcha en línea recta realizadas por pacientes diagnosticados o en evaluación. El objetivo principal es identificar patrones mediante modelos de Inteligencia Artificial que permitan predecir el riesgo de padecer la enfermedad. Para ello, se evaluaron diez modelos de machine learning y deep learning: MLP Network, Random Forest, XGBoost, Support Vector Machine, K-Nearest Neighbors, Regresión Logística, Árbol de Decisión, Time Series Transformer, LSTM y VGG-16 con aprendizaje por transferencia. El modelo LSTM obtuvo el mejor rendimiento, alcanzando una precisión del 93.79%. Como resultado, se desarrolló una aplicación web dirigida a profesionales de la salud, que permite utilizar el modelo entrenado como herramienta de apoyo en el diagnóstico clínico."
+      },
+      "heartAttackResearch":{
+        "title": "Heart Attack Prediction Research",
+        "description": "Este proyecto se enfocó en el entrenamiento y evaluación de seis modelos de machine learning utilizando datos tabulares de pacientes, con el objetivo de predecir el riesgo de infarto al miocardio. Se analizaron los modelos MLP Network, Support Vector Machine (SVM), XGBoost, Random Forest, Regresión Logística y Árbol de Decisión. Los modelos XGBoost y Random Forest obtuvieron el mejor desempeño, alcanzando una precisión del 98.75%. Como parte del proyecto, se desarrolló una aplicación web que permite a los usuarios cargar sus datos tabulares y obtener predicciones de manera automatizada."
+      }
     }
-  }
+}

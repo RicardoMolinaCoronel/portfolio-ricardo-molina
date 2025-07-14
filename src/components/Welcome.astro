@@ -44,8 +44,7 @@ const t = useTranslations(lang);
 			{t.hero.title},
 		</h1>
 		<h2 class="lg:text-2xl text-lg text-center text-wrap">
-			Ingeniero en Ciencias Computacionales con <span class="text-[var(--blue-300)] dark:text-blue-300/90">experiencia en el 
-			desarrollo fullstack, móvil e inteligencia artificial</span>
+			{t.hero.subtitle1} <span class="text-[var(--blue-300)] dark:text-blue-300/90">{t.hero.subtitle2}</span>
 		</h2>
 		<div class="flex gap-3">
 			<MainIcons href="https://github.com/RicardoMolinaCoronel">
@@ -65,50 +64,50 @@ const t = useTranslations(lang);
 				   alt="imagen ricardo molina"
 				   class="w-full h-full object-cover rounded-full" />
 			</div>
-			<span class="text-lg font-medium text-gray-600 dark:text-gray-300">Guayaquil, Ecuador</span>
-			<span class="text-lg font-medium text-gray-600 dark:text-gray-300 -mt-3">23 años</span>
+			<span class="text-lg font-medium text-gray-600 dark:text-gray-300">{t.hero.location}</span>
+			<span class="text-lg font-medium text-gray-600 dark:text-gray-300 -mt-3">{t.hero.age}</span>
 		  </div>
   
 	
 
 </SectionContainer>
-	<SectionContainer id="experience" data-label="Experiencia" class="lg:py-44 py-30">
+	<SectionContainer id="experience" data-label={t.sections.experience} class="lg:py-44 py-30">
 		<h2 class="flex flex-col lg:flex-row gap-2 pb-3 lg:gap-5 lg:text-3xl text-2xl font-semibold text-center justify-center items-center lg:justify-start mb-5">
 			<DeskIcon class="lg:size-8 size-6"/>
-			Experiencia</h2>
+			{t.sections.experience}</h2>
 		<Experience />
 	</SectionContainer>
 
-	<SectionContainer id="projects" data-label="Proyectos" class="lg:py-44 py-30">
+	<SectionContainer id="projects" data-label={t.sections.projects} class="lg:py-44 py-30">
 		<h2 class="flex flex-col lg:flex-row gap-2 pb-3 lg:gap-5 lg:text-3xl text-2xl font-semibold text-center justify-center items-center lg:justify-start mb-5">
 			<CodeIcon class="size-8"/>
-			Proyectos</h2>
+			{t.sections.projects}</h2>
 		<Projects />
 	</SectionContainer>
 
-	<SectionContainer id="education" data-label="Educación" class="lg:py-44 py-30">
+	<SectionContainer id="education" data-label={t.sections.education} class="lg:py-44 py-30">
 		<h2 class="flex flex-col lg:flex-row w-full gap-2 pb-3 lg:gap-5 lg:text-3xl text-2xl font-semibold text-center justify-center items-center lg:justify-start mb-5">
 			<PenIcon class="size-8"/>
-			Educación</h2>
+			{t.sections.education}</h2>
 		<Education />
 	</SectionContainer>
 
 	
-	<SectionContainer id="technologies" data-label="Tecnologías" class="lg:py-44 py-30">
+	<SectionContainer id="technologies" data-label={t.sections.technologies} class="lg:py-44 py-30">
 		<h2 class="flex flex-col w-full lg:flex-row gap-2 pb-3 lg:gap-5 lg:text-3xl text-2xl font-semibold text-center justify-center items-center lg:justify-start mb-5">
 			<PCIcon class="size-8"/>
-			Tecnologías</h2>
+			{t.sections.technologies}</h2>
 		<Technologies />
 	</SectionContainer>
 
-	<SectionContainer id="achievements" data-label="Logros" class="lg:py-44 py-30">
+	<SectionContainer id="achievements" data-label={t.sections.achievements} class="lg:py-44 py-30">
 		<h2 class="flex flex-col w-full lg:flex-row gap-2 pb-3 lg:gap-5 lg:text-3xl text-2xl font-semibold text-center justify-center items-center lg:justify-start mb-5">
 			<RosetteIcon class="size-8"/>
-			Logros</h2>
+			{t.sections.achievements}</h2>
 		<Achievements />
 	</SectionContainer>
 
-	 <SectionContainer id="contact" data-label="Contacto" class="pt-5 min-h-[calc(100vh-12rem)] lg:py-10 py-30">
+	 <SectionContainer id="contact" data-label={t.sections.contact} class="pt-5 min-h-[calc(100vh-12rem)] lg:py-10 py-30">
 		<Contact />
 	</SectionContainer> 
 	</main>

@@ -1,15 +1,154 @@
 {
+  "technologiesSTR": "Technologies",
     "hero": {
       "title": "I'm Ricardo Molina",
-      "subtitle": "Computer Science Engineer with experience in fullstack, mobile, and AI development",
-      "cta": "Let’s build something together"
+      "subtitle1": "Computer Science Engineer with ",
+      "subtitle2": "experience in fullstack, mobile, and AI development",
+      "cta": "Let’s build something together",
+      "menu": "Menu",
+      "age": "23 years old",
+      "location": "Guayaquil, Ecuador",
+      "footer": "Made by Ricardo Molina"
     },
     "sections": {
+      "home": "Home",
       "experience": "Experience",
       "projects": "Projects",
       "education": "Education",
       "technologies": "Technologies",
       "achievements": "Achievements",
       "contact": "Contact"
+    },
+    "experience": {
+      "bdp": {
+        "title": "Banco del Pacífico",
+        "subtitle": "Mobile Developer",
+        "date": "April 2025 - Present",
+        "description": "I am currently in charge of migrating the bank's internal mobile application for employees from its Xamarin version to a new version developed in Swift and SwiftUI for iOS devices. I am also responsible for maintaining the Android version of the same application, developed in Kotlin using Jetpack Compose."
+      },
+      "retailPoint": {
+        "title": "RetailPoint del Ecuador",
+        "subtitle": "Software Developer",
+        "date": "February 2022 - May 2025",
+        "description":"As a software developer, I have taken on both technical and leadership roles in frontend, backend, and mobile application development projects. I have been involved in building mobile and desktop solutions using Java and Kotlin, integrating features for interaction with RFID hardware and security devices. Additionally, I have developed web applications using technologies such as React.js, Firebase, and Node.js, focused on inventory management and sales control. I have also contributed to various backend projects using frameworks like Express.js, Spring Boot, and Laravel."
+      },
+      "espol": {
+        "title": "Research Assistant",
+        "subtitle": "Data and Machine Learning Engineer",
+        "date": "September 2024 - February 2025",
+        "description": "As a research assistant, I actively participated in conducting experiments and preparing reports for two projects focused on disease diagnosis through data engineering and artificial intelligence. In the first study, we analyzed tabular clinical data from patients using seven machine learning models to predict the risk of heart attacks. In the second research project, we evaluated ten machine learning and deep learning models to estimate the risk of Parkinson's disease, using IMU sensor data captured during straight-line walking tests. We achieved promising results, reaching up to 93.79% accuracy. Currently, an article with the findings of this research is in the process of being published in ACM journals."
+      }
+    },
+    "projects":{
+      "intranet":{
+        "title": "Intranet BdP",
+        "description": "Intranet BdP is a mobile application designed for the employees of Banco del Pacífico, offering features such as employee information search, viewing cafeteria and restaurant schedules and menus at the corresponding headquarters, and access to various authorized processes based on each employee’s role."
+      },
+      "analyticsAdmin":{
+        "title": "Analytics Admin",
+        "description": "Analytics Admin is a web application designed to visualize and manage a dashboard with key metrics related to customer inflow and outflow in the company's stores, as well as conversion rates and other relevant KPIs. The system retrieves data processed by AI-powered cameras through a backend, which is then stored in a database and combined with billing files and other records from the company using the service."
+      },
+      "suplaierWeb":{
+        "title": "Suplaier Web",
+        "description": "Suplaier Web is the web version of the Suplaier system, designed to facilitate interaction between sellers and buyers from mobile devices. The application allows sellers to post offers for available products, while buyers can join these offers, including cooperative deals that offer discounts in exchange for longer wait times. The platform also features a product demand functionality, where buyers post their needs and sellers submit proposals, enabling buyers to choose the most suitable offer."
+      },
+      "suplaierMobile":{
+        "title": "Suplaier Mobile",
+        "description": "Suplaier Mobile is the mobile version of the Suplaier system, designed to facilitate interaction between sellers and buyers from mobile devices. It offers the same functionalities as the web version but with an interface adapted for mobile use."
+      },
+      "clearInventory":{
+        "title": "Clear Inventory",
+        "description": "Clear Inventory is an Android mobile application with RFID hardware interaction, designed for inventory control of both corporate fixed assets and stock products. It has over six different versions, each tailored to specific clients and their unique needs. The app integrates RFID technology for tag reading, allowing the captured information to be linked with files or databases associated with the products. Key features include report generation, email sending, CSV data export, real-time inventory visualization, and other advanced management tools."
+      },
+      "parkinsonResearch":{
+        "title": "Parkinson Disease Research",
+        "description": "This research project focuses on the study of Parkinson's disease through the analysis of data collected using inertial sensors (IMUs) during straight-line walking tests performed by patients who have been diagnosed or are under evaluation. The main objective is to identify patterns using Artificial Intelligence models to predict the risk of developing the disease. To achieve this, ten machine learning and deep learning models were evaluated: MLP Network, Random Forest, XGBoost, Support Vector Machine, K-Nearest Neighbors, Logistic Regression, Decision Tree, Time Series Transformer, LSTM, and VGG-16 with transfer learning. The LSTM model delivered the best performance, achieving an accuracy of 93.79%. As a result, a web application was developed for healthcare professionals, enabling the use of the trained model as a clinical decision support tool."
+      },
+      "heartAttackResearch":{
+        "title": "Heart Attack Prediction Research",
+        "description": "This project focused on the training and evaluation of six machine learning models using tabular patient data, with the goal of predicting the risk of myocardial infarction. The models analyzed were MLP Network, Support Vector Machine (SVM), XGBoost, Random Forest, Logistic Regression, and Decision Tree. XGBoost and Random Forest showed the best performance, achieving an accuracy of 98.75%. As part of the project, a web application was developed that allows users to upload their tabular data and receive automated predictions."
+      }
+    },
+    "education":{
+      "masterUnir":{
+        "title": "Master’s in Artificial Intelligence (In Progress)",
+        "subtitle": "UNIR - International University of La Rioja",
+        "description": "During my studies in the Official Master’s Program in Artificial Intelligence, I will receive comprehensive training in the five core areas of the discipline with the greatest real-world impact. The program covers machine learning, focused on developing systems capable of learning from data; deep learning, based on neural networks for voice and image recognition; natural language processing, aimed at understanding human language; computer vision, for automated analysis of images and videos; and algorithmic planning, applied to decision-making and process optimization. This training will enable me to develop intelligent solutions, automate complex tasks, and contribute to enhancing human experiences across various technological contexts.",
+        "date": "Jun. 2025 - Sep. 2026"
+      },
+      "espol":{
+        "title": "Computer Science Engineer",
+        "subtitle": "ESPOL",
+        "description": "During my studies in Computer Science Engineering at ESPOL, I received comprehensive training in various areas of software development and information technologies. This education allowed me to develop a strong command of Object-Oriented Programming and Data Structures, which are fundamental for building scalable and sustainable solutions. I also strengthened my knowledge in Software Design and Database Systems, key competencies for creating efficient and reliable applications. Through courses such as Systems Programming, Operating Systems, and Algorithm Analysis, I enhanced my ability to design high-performance and optimized systems. I also explored web and mobile development, gaining experience in creating functional and responsive interfaces. Information Security was an essential part of my education, equipping me with the tools necessary to protect data and systems. Learning multiple programming languages enabled me to adapt to different technological environments.Additionally, I deepened my knowledge in areas such as Software Engineering, Artificial Intelligence, Distributed Systems, and Cloud Computing, which provided me with a broad understanding of designing intelligent and distributed solutions. Finally, my training included IT Project Management and Information Systems, preparing me to lead technological initiatives and effectively manage IT resources in organizational settings.",
+        "date": "May. 2020 - Feb. 2025"
+      },
+      "highSchool":{
+        "title": "High School Diploma in Information Systems",
+        "subtitle": "José Domingo de Santistevan School",
+        "description": "During my studies for a High School Diploma in Information Systems, I gained a solid foundation in key areas of software development and information technologies. I studied the principles of imperative and object-oriented programming, as well as the fundamentals of networking and database systems, which allowed me to develop a comprehensive and practical understanding of the process of building efficient and well-structured software solutions.",
+        "date": "Apr. 2017 - Jan. 2020"
+      }
+    },
+    "achievements":{
+      "awsDataEngineering":{
+        "title":"AWS Academy Graduate - AWS Academy Data Engineering",
+        "subtitle":"Amazon Web Services Training and Certification",
+        "description":"This certification, issued by Amazon Web Services (AWS), validates the completion of the AWS Academy Data Engineering course and certifies key competencies in designing, building, and maintaining cloud-based data architectures, as well as in creating scalable data pipelines, implementing security principles for data handling, and using AWS services focused on data engineering. Additionally, it demonstrates proficiency in the data lifecycle, covering data ingestion, processing, storage, and analysis.",
+        "date":"Jan. 2025 - Jan. 2028"
+      },
+      "c1ProficiencyEspol":{
+        "title":"C1 English proficiency - Cambridge Placement Test",
+        "subtitle":"CELEX – Center for Foreign Languages / Cambridge",
+        "description":"Certification awarded by the Center for Foreign Languages (CELEX) of the Escuela Superior Politécnica del Litoral (ESPOL), recognizing the performance on the Cambridge Placement Test taken on December 8, 2024, with a perfect score of 50/50, corresponding to level C1 or higher of the Common European Framework of Reference for Languages (CEFR).",
+        "date":"Mar. 2024"
+      },
+      "mentoring":{
+        "title":"Mentorship Program - ESPOL",
+        "subtitle":"ESPOL - Escuela Superior Politécnica del Litoral",
+        "description":"",
+        "date":""
+      },
+      "advancedSwift":{
+        "title":"Mentorship Program - ESPOL",
+        "subtitle":"ESPOL - Escuela Superior Politécnica del Litoral",
+        "description":"",
+        "date":""
+      },     
+      "kotlinJava":{
+        "title":"Mentorship Program - ESPOL",
+        "subtitle":"ESPOL - Escuela Superior Politécnica del Litoral",
+        "description":"",
+        "date":""
+      },
+      "createSwiftUI":{
+        "title":"Mentorship Program - ESPOL",
+        "subtitle":"ESPOL - Escuela Superior Politécnica del Litoral",
+        "description":"",
+        "date":""
+      },
+      "postgressPlatzi":{
+        "title":"Mentorship Program - ESPOL",
+        "subtitle":"ESPOL - Escuela Superior Politécnica del Litoral",
+        "description":"",
+        "date":""
+      },
+      "postgressPlatzi":{
+        "title":"Mentorship Program - ESPOL",
+        "subtitle":"ESPOL - Escuela Superior Politécnica del Litoral",
+        "description":"",
+        "date":""
+      }, 
+      "postgressPlatzi":{
+        "title":"Mentorship Program - ESPOL",
+        "subtitle":"ESPOL - Escuela Superior Politécnica del Litoral",
+        "description":"",
+        "date":""
+      }, 
+      "postgressPlatzi":{
+        "title":"Mentorship Program - ESPOL",
+        "subtitle":"ESPOL - Escuela Superior Politécnica del Litoral",
+        "description":"",
+        "date":""
+      }
     }
 }

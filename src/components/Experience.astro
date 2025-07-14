@@ -3,15 +3,17 @@
 
 import ExperienceItem from "./ExperienceItem.astro"
 import { TAGS } from "./TAGS.astro"
+import { useTranslations, getLangFromUrl } from '../utils/i18n';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const experiences = [
     {
-        title: "Banco del Pacífico - Desarrollador móvil",
-        date: "Mayo 2025 - Actualidad",
-        description: `Como desarrollador móvil, me encargue de la migración de la aplicación móvil Intranet para funcionarios del banco de su versión en Xamarin 
-        a su versión en Swift y SwiftUI para dispositivos iOS, además de 
-        dar mantenimiento a la versión Android de esta misma aplicación, hecha
-        en Kotlin con Jetpack Compose.`,
+        title: t.experience.bdp.title,
+        subtitle: t.experience.bdp.subtitle,
+        date: t.experience.bdp.date,
+        description: t.experience.bdp.description,
         
         image: "/logos/bdp.png",
         alt: "Banco del Pacífico",
@@ -21,15 +23,10 @@ const experiences = [
         ]
     },
     {
-        title: "RetailPoint del Ecuador - Desarrollador de software",
-        date: "February 2022",
-        description: `Como desarrollador de software, he desempeñado roles tanto técnicos como de liderazgo en proyectos de desarrollo frontend, backend y aplicaciones móviles. 
-        He participado en la creación de soluciones móviles y de escritorio utilizando
-         Java y Kotlin, integrando funcionalidades de interacción con hardware RFID y 
-         dispositivos de seguridad. Además, he desarrollado aplicaciones web con tecnologías
-          como React.js, Firebase y Node.js, enfocadas en la gestión de inventario y control 
-          de ventas. También he contribuido en diversos proyectos backend utilizando frameworks como Express.js, Spring Boot y Laravel.
-        `,
+        title: t.experience.retailPoint.title,
+        subtitle: t.experience.retailPoint.subtitle,
+        date: t.experience.retailPoint.date,
+        description: t.experience.retailPoint.description,
         image: "/logos/retailpoint.webp",
         alt: "RetailPoint",
         tags: [TAGS.java, TAGS.kotlin, TAGS.jetpackCompose,TAGS.androidStudio, TAGS.react, TAGS.node
@@ -39,19 +36,10 @@ const experiences = [
         TAGS.jwt, TAGS.figma]
     },
     {
-        title: "Ayudante de Investigación",
-        date: "February 2022",
-        description: `Como ayudante de investigación, 
-        participé activamente en la ejecución de experimentos y elaboración de 
-        reportes en dos proyectos enfocados en el diagnóstico de enfermedades mediante 
-        ingeniería de datos e inteligencia artificial. En el primer estudio, 
-        analizamos datos clínicos tabulares de pacientes utilizando siete modelos de 
-        machine learning para predecir el riesgo de sufrir ataques cardíacos. 
-        En la segunda investigación, evaluamos diez modelos de machine learning y 
-        deep learning para estimar el riesgo de padecer la enfermedad de Parkinson, 
-        empleando datos de sensores IMU capturados durante pruebas de marcha en línea 
-        recta. Obtuvimos resultados prometedores, alcanzando hasta un 93.79% de precisión. Actualmente,
-         un artículo con los hallazgos de esta investigación se encuentra en proceso de publicación en ACM journals.`,
+        title: t.experience.espol.title,
+        subtitle: t.experience.espol.subtitle,
+        date: t.experience.espol.date,
+        description: t.experience.espol.description,
         image: "/logos/espol_logo_blue.webp",
         alt: "ESPOL",
         tags: [TAGS.tensorflow, TAGS.scikitLearn, TAGS.pytorch, TAGS.python, TAGS.Django, TAGS.postgresql, TAGS.sqlite, TAGS.git,
@@ -65,7 +53,7 @@ const experiences = [
         experiences.map(experience => (
         <li class="mb-10 ms-4">
         <ExperienceItem {...experience}/>
-        <h4 class="lg:text-lg text-base font-semibold text-[var(--primary-black)] dark:text-gray-100 mt-7 mb-4">Tecnologías
+        <h4 class="lg:text-lg text-base font-semibold text-[var(--primary-black)] dark:text-gray-100 mt-7 mb-4">{t.technologiesSTR}
             <div class="h-[2px] bg-[var(--primary-black)] dark:bg-gray-300 w-1/16 mb-2"></div>
         </h4>
         <ul class="flex flex-row flex-wrap gap-2 mt-2">{
