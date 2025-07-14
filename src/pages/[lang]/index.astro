@@ -1,0 +1,22 @@
+---
+import Welcome from '../../components/Welcome.astro';
+import Layout from '../../layouts/Layout.astro';
+import { useTranslations, getLangFromUrl } from '../../utils/i18n';
+
+export async function getStaticPaths() {
+  return [
+    { params: { lang: 'es' } },
+    { params: { lang: 'en' } }
+  ];
+}
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout title="Portfolio de Ricardo Molina - Desarrollador. Ingeniero de Datos e Inteligencia Artificial con mas de 4 años de experiencia"
+description="Portfolio de Ricardo Molina - Desarrollador - Ingeniero de Datos e Inteligencia Artificial con mas de 4 años de experiencia">
+	<Welcome />
+</Layout>

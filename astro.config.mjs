@@ -14,4 +14,7 @@ export default defineConfig({
   site: 'https://ricardomolinacoronel.tech', // tu dominio personalizado
   base: '/',
   outDir: 'dist',
+  redirects: {
+    '/': '/es'
+  }
 });

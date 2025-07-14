@@ -1,0 +1,15 @@
+{
+    "hero": {
+      "title": "I'm Ricardo Molina",
+      "subtitle": "Computer Science Engineer with experience in fullstack, mobile, and AI development",
+      "cta": "Let’s build something together"
+    },
+    "sections": {
+      "experience": "Experience",
+      "projects": "Projects",
+      "education": "Education",
+      "technologies": "Technologies",
+      "achievements": "Achievements",
+      "contact": "Contact"
+    }
+}

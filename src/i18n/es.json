@@ -1,0 +1,15 @@
+{
+    "hero": {
+      "title": "Soy Ricardo Molina",
+      "subtitle": "Ingeniero en Ciencias Computacionales con experiencia en desarrollo fullstack, móvil e inteligencia artificial",
+      "cta": "Construyamos algo juntos"
+    },
+    "sections": {
+      "experience": "Experiencia",
+      "projects": "Proyectos",
+      "education": "Educación",
+      "technologies": "Tecnologías",
+      "achievements": "Logros",
+      "contact": "Contacto"
+    }
+  }

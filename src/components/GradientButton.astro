@@ -9,14 +9,14 @@ class={`group relative inline-block w-fit hover:scale-105 active:scale-110 trans
   <!-- Contenedor redondeado principal -->
   <div class={`flex w-50 py-3 items-center rounded-full shadow-xl transition-all ${gradient}`}>
     <!-- Texto -->
-    <span class=" pl-13 pr-1 text-white lg:text-sm text-xs font-semibold">{label}</span>
+    <span class=" pl-13 pr-1 lg:text-sm text-xs font-semibold">{label}</span>
   </div>
 
 
-  <div class={`absolute group-hover:-rotate-30 transition-all duration-300 z-5 left-0 top-1/2 -translate-y-1/2 w-10 h-10 inset-0 scale-105 blur-lg bg-gray-400 opacity-40 rounded-lg ${square ? 'clip-square-shadow group-hover:animate-spin' : 'clip-triangle-shadow'}`}></div>
+  <div class={`absolute group-hover:-rotate-30 transition-all duration-300 z-5 left-0 top-1/2 -translate-y-1/2 w-10 h-10 inset-0 scale-105 blur-lg dark:bg-gray-400 bg-gray-700 opacity-40 rounded-lg ${square ? 'clip-square-shadow group-hover:animate-spin' : 'clip-triangle-shadow'}`}></div>
 
   <!-- Triángulo sobre el borde izquierdo -->
-  <div class={`absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 group-hover:-rotate-12 transition-all duration-300 bg-gradient-to-r from-gray-400 to-gray-200 z-10 shadow-2xl ${square ? 'clip-square group-hover:animate-bounce' : 'clip-triangle'}`}>
+  <div class={`absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 group-hover:-rotate-12 transition-all duration-300 bg-gradient-to-r dark:from-gray-400 dark:to-gray-200 from-gray-800 to-gray-600 z-10 shadow-2xl ${square ? 'clip-square group-hover:animate-bounce' : 'clip-triangle'}`}>
     <!-- Ícono opcional dentro -->
     <div class={`flex items-center ${square ? 'justify-center ' : 'justify-start'} w-full h-full`}>
       <slot />

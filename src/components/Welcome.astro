@@ -20,13 +20,17 @@ import Contact from './Contact.astro';
 import Technologies from './Technologies.astro';
 import Achievements from './Achievements.astro';
 import MainButton from './MainButton.astro';
+import { useTranslations, getLangFromUrl } from '../utils/i18n';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div id="section-label"
      class="fixed left-1/16 top-9/12 -translate-y-1/2 z-50 hidden lg:block
             text-lg tracking-widest font-bold rotate-[-90deg] origin-left pl-4
             text-white transition-all duration-500 ease-in-out">
-  <span class="transition-all duration-500 ease-in-out block opacity-100 translate-y-0 text-6xl font-semibold text-gray-500/50">
+  <span class="transition-all duration-500 ease-in-out block opacity-100 translate-y-0 text-6xl font-semibold dark:text-gray-500/50 text-gray-400/60">
     
   </span>
 </div>
@@ -37,10 +41,10 @@ import MainButton from './MainButton.astro';
 		 <SectionContainer id="home" data-label=" "class="pt-25 lg:pt-10 min-h-[calc(100vh-10rem)] flex flex-col-reverse w-full lg:flex-row lg:justify-between items-center"> 
 		<div class="flex flex-col justify-center items-center gap-3">
 			<h1 class="lg:text-5xl text-3xl font-bold text-center">
-			Soy Ricardo Molina,
+			{t.hero.title},
 		</h1>
 		<h2 class="lg:text-2xl text-lg text-center text-wrap">
-			Ingeniero en Ciencias Computacionales con <span class="text-blue-300/90">experiencia en el 
+			Ingeniero en Ciencias Computacionales con <span class="text-[var(--blue-300)] dark:text-blue-300/90">experiencia en el 
 			desarrollo fullstack, móvil e inteligencia artificial</span>
 		</h2>
 		<div class="flex gap-3">
@@ -61,8 +65,8 @@ import MainButton from './MainButton.astro';
 				   alt="imagen ricardo molina"
 				   class="w-full h-full object-cover rounded-full" />
 			</div>
-			<span class="text-lg font-medium text-gray-500 dark:text-gray-300">Guayaquil, Ecuador</span>
-			<span class="text-lg font-medium text-gray-500 dark:text-gray-300 -mt-3">23 años</span>
+			<span class="text-lg font-medium text-gray-600 dark:text-gray-300">Guayaquil, Ecuador</span>
+			<span class="text-lg font-medium text-gray-600 dark:text-gray-300 -mt-3">23 años</span>
 		  </div>
   
 	

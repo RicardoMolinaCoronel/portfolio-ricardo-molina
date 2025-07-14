@@ -1,12 +1,8 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+// src/pages/index.astro
+import { redirect } from 'astro/runtime/server';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+export const prerender = false; // importante para evitar generación estática
+
+redirect('/es');
 ---
-
-<Layout title="Portfolio de Ricardo Molina - Desarrollador. Ingeniero de Datos e Inteligencia Artificial con mas de 4 años de experiencia"
-description="Portfolio de Ricardo Molina - Desarrollador - Ingeniero de Datos e Inteligencia Artificial con mas de 4 años de experiencia">
-	<Welcome />
-</Layout>
