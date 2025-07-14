@@ -20,11 +20,25 @@ const { title, description } = Astro.props;
 		<meta name="description" content={description}>
 		<title>{title}</title>
 	</head>
-	<body>
-		<div class="pointer-events-none fixed inset-0 -z-10">
+	<body class="bg-[#f5f5f5] text-black dark:bg-black dark:text-white">
+		<!-- <div class="pointer-events-none fixed inset-0 -z-10">
 			<div class="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
 			<div class="absolute top-[-10%] left-1/2 transform -translate-x-1/2 h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#000)]"></div>
-		</div>
+		</div> -->
+		<div class="pointer-events-none fixed inset-0 -z-10">
+			<!-- Fondo para modo claro -->
+			<div class="absolute inset-0 dark:hidden bg-[linear-gradient(to_right,#cccccc21_1px,transparent_1px),linear-gradient(to_bottom,#cccccc1a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
+		  
+			<!-- Fondo para modo oscuro -->
+			<div class="absolute inset-0 hidden dark:block bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
+		  
+			<!-- Radial claro -->
+			<div class="absolute top-[-10%] left-1/2 transform -translate-x-1/2 h-[1000px] w-[1000px] rounded-full dark:hidden bg-[radial-gradient(circle_400px_at_50%_300px,#eaeaea44,#f5f5f5)]"></div>
+		  
+			<!-- Radial oscuro -->
+			<div class="absolute top-[-10%] left-1/2 transform -translate-x-1/2 h-[1000px] w-[1000px] rounded-full hidden dark:block bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#000)]"></div>
+		  </div>
+		  
 		<div class="relative z-10">
 			<HeaderReact client:load />
 			<slot />
@@ -44,7 +58,6 @@ const { title, description } = Astro.props;
 		scroll-behavior: smooth;
 	}
 	body {
-		background: #000;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
