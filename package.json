@@ -6,6 +6,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "deploy": "astro build && gh-pages -d dist",
     "astro": "astro"
   },
   "dependencies": {
@@ -13,11 +14,17 @@
     "@fontsource-variable/fira-code": "^5.2.6",
     "@fontsource/ibm-plex-mono": "^5.2.6",
     "@lottiefiles/lottie-player": "^2.0.12",
-    "@tailwindcss/vite": "^4.1.10",
+    "@tailwindcss/vite": "^4.1.11",
     "astro": "^5.9.3",
     "lottie-web": "^5.13.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "tailwindcss": "^4.1.10"
+    "tailwindcss": "^4.1.11"
+  },
+  "devDependencies": {
+    "@astrojs/tailwind": "^6.0.2",
+    "autoprefixer": "^10.4.21",
+    "gh-pages": "^6.3.0",
+    "postcss": "^8.5.6"
   }
 }
