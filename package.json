@@ -12,8 +12,11 @@
   "dependencies": {
     "@astrojs/react": "^4.3.0",
     "@fontsource-variable/fira-code": "^5.2.6",
+    "@fontsource-variable/public-sans": "^5.2.6",
+    "@fontsource-variable/roboto-flex": "^5.2.6",
     "@fontsource/ibm-plex-mono": "^5.2.6",
     "@lottiefiles/lottie-player": "^2.0.12",
+    "@midudev/tailwind-animations": "^0.2.0",
     "@tailwindcss/vite": "^4.1.11",
     "astro": "^5.9.3",
     "lottie-web": "^5.13.0",

@@ -24,152 +24,164 @@ import { useTranslations, getLangFromUrl } from '../utils/i18n';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const isHome = Astro.url.pathname === `/${lang}` || Astro.url.pathname === `/${lang}/`;
+
 ---
 
-<div id="section-label"
-     class="fixed left-1/16 top-9/12 -translate-y-1/2 z-50 hidden lg:block
-            text-lg tracking-widest font-bold rotate-[-90deg] origin-left pl-4
-            text-white transition-all duration-500 ease-in-out">
-  <span class="transition-all duration-500 ease-in-out block opacity-100 translate-y-0 text-5xl font-semibold dark:text-gray-500/50 text-gray-400/60">
-    
-  </span>
-</div>
 
-
-
-	<main class="lg:px-60 px-6">
-		 <SectionContainer id="home" data-label=" "class="pt-25 lg:pt-10 min-h-[calc(100vh-10rem)] flex flex-col-reverse w-full lg:flex-row lg:justify-between items-center"> 
-		<div class="flex flex-col justify-center items-center gap-3">
-			<h1 class="lg:text-5xl text-3xl font-bold text-center">
+	<div id="section-label"
+		 class="fixed xl:left-1/28 2xl:left-1/16 top-9/12 -translate-y-1/2 z-50 hidden xl:block
+				text-lg tracking-widest font-bold rotate-[-90deg] origin-left pl-2
+				text-white transition-all duration-500 ease-in-out">
+	  <span class="transition-all duration-500 ease-in-out block opacity-100 translate-y-0 lg:text-3xl xl:text-4xl 2xl:text-5xl font-semibold dark:text-gray-500/50 text-gray-400/60">
+	  </span>
+	</div>
+  
+	<main class="max-w-7xl mx-auto px-6">
+		 <SectionContainer id="home" data-label=" "class="pt-25 xl:pt-10 min-h-[calc(100vh-10rem)] flex flex-col-reverse w-full xl:flex-row justify-between items-center"> 
+		
+			<div class="flex flex-col justify-center items-center gap-3">
+			<h1 class="zoom-bounce opacity-0 scale-80 transition-all duration-400 ease-out xl:text-5xl text-3xl font-bold text-center">
 			{t.hero.title},
 		</h1>
-		<h2 class="lg:text-2xl text-lg text-center text-wrap">
+		<h2 class="fade-tag opacity-0 translate-y-3 transition-all duration-1000 ease-out xl:text-2xl text-lg text-center text-wrap">
 			{t.hero.subtitle1} <span class="text-[var(--blue-300)] dark:text-blue-300/90">{t.hero.subtitle2}</span>
 		</h2>
 		<div class="flex gap-3">
 			<MainIcons href="https://github.com/RicardoMolinaCoronel">
-				<GitHubIcon class="size-8"/>	
+				<GitHubIcon class="animate-roll-in size-8"/>	
 			</MainIcons>
 			<MainIcons href="https://www.linkedin.com/in/ricardo-duval-molina-coronel">
-				<LinkedInIcon class="size-8"/>	
+				<LinkedInIcon class="animate-roll-in size-8"/>	
 			</MainIcons>
 
 
 	</div>
-		<MainButton link="#experience" label="Construyamos algo juntos" gradient="bg-gradient-to-r from-gray-900 to-gray-700" className="pt-8"/>
+		<MainButton link="#experience" label="Construyamos algo juntos" gradient="bg-gradient-to-r from-gray-900 to-gray-700" className="fade-zoom opacity-0 scale-85 transition-all duration-700 ease-out pt-8"/>
 	</div>
-		<div class="flex flex-col items-center justify-center gap-2 mb-10 lg:mb-0">
-			<div class="lg:size-96 size-72">
-			  <img src="me.webp"
+		<div class="flex flex-col items-center justify-center gap-2 mb-10 xl:mb-0">
+			<div class="xl:size-96 lg:size-96 md:size-88 size-72">
+			  <img src="me1.jpg"
 				   alt="imagen ricardo molina"
-				   class="w-full h-full object-cover rounded-full" />
+				   class="fade-zoom opacity-0 scale-85 transition-all duration-1000 ease-out w-full h-full object-cover rounded-full" />
 			</div>
-			<span class="text-lg font-medium text-gray-600 dark:text-gray-300">{t.hero.location}</span>
-			<span class="text-lg font-medium text-gray-600 dark:text-gray-300 -mt-3">{t.hero.age}</span>
+			<span class="fade-in opacity-0 translate-y-4 transition-all duration-700 ease-out text-lg font-medium text-gray-600 dark:text-gray-300">{t.hero.location}</span>
+			<span class="fade-in opacity-0 translate-y-4 transition-all duration-700 ease-out text-lg font-medium text-gray-600 dark:text-gray-300 -mt-3">{t.hero.age}</span>
 		  </div>
   
 	
 
 </SectionContainer>
-	<SectionContainer id="experience" data-label={t.sections.experience} class="lg:py-44 py-30">
-		<h2 class="flex flex-col lg:flex-row gap-2 pb-3 lg:gap-5 lg:text-3xl text-2xl font-semibold text-center justify-center items-center lg:justify-start mb-5">
-			<DeskIcon class="lg:size-8 size-6"/>
+	<SectionContainer id="experience" data-label={t.sections.experience} class="xl:py-44 py-30">
+		<h2 class="fade-in opacity-0 translate-y-4 transition-all duration-700 ease-out flex flex-col xl:flex-row gap-2 pb-3 xl:gap-5 xl:text-3xl text-2xl font-semibold text-center justify-center items-center xl:justify-start mb-5">
+			<DeskIcon class="xl:size-8 size-6"/>
 			{t.sections.experience}</h2>
 		<Experience />
 	</SectionContainer>
 
-	<SectionContainer id="projects" data-label={t.sections.projects} class="lg:py-44 py-30">
-		<h2 class="flex flex-col lg:flex-row gap-2 pb-3 lg:gap-5 lg:text-3xl text-2xl font-semibold text-center justify-center items-center lg:justify-start mb-5">
+	<SectionContainer id="projects" data-label={t.sections.projects} class="xl:py-44 py-30">
+		<h2 class="fade-in opacity-0 translate-y-4 transition-all duration-700 ease-out flex flex-col xl:flex-row gap-2 pb-3 xl:gap-5 xl:text-3xl text-2xl font-semibold text-center justify-center items-center xl:justify-start mb-5">
 			<CodeIcon class="size-8"/>
 			{t.sections.projects}</h2>
 		<Projects />
 	</SectionContainer>
 
-	<SectionContainer id="education" data-label={t.sections.education} class="lg:py-44 py-30">
-		<h2 class="flex flex-col lg:flex-row w-full gap-2 pb-3 lg:gap-5 lg:text-3xl text-2xl font-semibold text-center justify-center items-center lg:justify-start mb-5">
+	<SectionContainer id="education" data-label={t.sections.education} class="xl:py-44 py-30">
+		<h2 class="fade-in opacity-0 translate-y-4 transition-all duration-700 ease-out flex flex-col xl:flex-row w-full gap-2 pb-3 xl:gap-5 xl:text-3xl text-2xl font-semibold text-center justify-center items-center xl:justify-start mb-5">
 			<PenIcon class="size-8"/>
 			{t.sections.education}</h2>
 		<Education />
 	</SectionContainer>
 
 	
-	<SectionContainer id="technologies" data-label={t.sections.technologies} class="lg:py-44 py-30">
-		<h2 class="flex flex-col w-full lg:flex-row gap-2 pb-3 lg:gap-5 lg:text-3xl text-2xl font-semibold text-center justify-center items-center lg:justify-start mb-5">
+	<SectionContainer id="technologies" data-label={t.sections.technologies} class="xl:py-44 py-30">
+		<h2 class="fade-in opacity-0 translate-y-4 transition-all duration-700 ease-out flex flex-col w-full xl:flex-row gap-2 pb-3 xl:gap-5 xl:text-3xl text-2xl font-semibold text-center justify-center items-center xl:justify-start mb-5">
 			<PCIcon class="size-8"/>
 			{t.sections.technologies}</h2>
 		<Technologies />
 	</SectionContainer>
 
-	<SectionContainer id="achievements" data-label={t.sections.achievements} class="lg:py-44 py-30">
-		<h2 class="flex flex-col w-full lg:flex-row gap-2 pb-3 lg:gap-5 lg:text-3xl text-2xl font-semibold text-center justify-center items-center lg:justify-start mb-5">
+	<SectionContainer id="achievements" data-label={t.sections.achievements} class="xl:py-44 py-30">
+		<h2 class="fade-in opacity-0 translate-y-4 transition-all duration-700 ease-out flex flex-col w-full xl:flex-row gap-2 pb-3 xl:gap-5 xl:text-3xl text-2xl font-semibold text-center justify-center items-center xl:justify-start mb-5">
 			<RosetteIcon class="size-8"/>
 			{t.sections.achievements}</h2>
 		<Achievements />
 	</SectionContainer>
 
-	 <SectionContainer id="contact" data-label={t.sections.contact} class="pt-5 min-h-[calc(100vh-12rem)] lg:py-10 py-30">
+	 <SectionContainer id="contact" data-label={t.sections.contact} class="pt-5 min-h-[calc(100vh-12rem)] xl:py-10 py-30">
 		<Contact />
 	</SectionContainer> 
 	</main>
-
+	  
+	  
+	  
+	  
 
 <script is:inline>
-	document.addEventListener('DOMContentLoaded', () => {
-	  const labelEl = document.getElementById('section-label');
-	  const span = labelEl.querySelector('span');
-	  const sections = Array.from(document.querySelectorAll('section[data-label]'));
-  
-	  let currentLabel = "";
-  
-	  function getCurrentSection() {
-		const viewportHeight = window.innerHeight;
-		let current = null;
-		let minDiff = Infinity;
-  
-		sections.forEach(section => {
-		  const rect = section.getBoundingClientRect();
-		  const diff = Math.abs(rect.top - 50); // más sensible al inicio
-		  if (diff < minDiff && rect.top < viewportHeight) {
-			minDiff = diff;
-			current = section;
+		document.addEventListener('DOMContentLoaded', () => {
+		  const labelEl = document.getElementById('section-label');
+		  const span = labelEl.querySelector('span');
+		  const sections = Array.from(document.querySelectorAll('section[data-label]'));
+	  
+		  let currentLabel = "";
+	  
+		  function getCurrentSection() {
+			const viewportHeight = window.innerHeight;
+			let current = null;
+			let minDiff = Infinity;
+	  
+			sections.forEach(section => {
+			  const rect = section.getBoundingClientRect();
+			  const diff = Math.abs(rect.top - 50);
+			  if (diff < minDiff && rect.top < viewportHeight) {
+				minDiff = diff;
+				current = section;
+			  }
+			});
+	  
+			return current;
 		  }
+	  
+		  function updateLabel() {
+			const section = getCurrentSection();
+			if (!section) return;
+	  
+			const newLabel = section.getAttribute('data-label');
+			const isHome = section.id === 'home';
+	  
+			if (isHome) {
+			  // Ocultar completamente
+			  labelEl.style.display = 'none';
+			  currentLabel = "";
+			  return;
+			} else {
+			  // Mostrar si no es home
+			  labelEl.style.removeProperty('display');
+			}
+	  
+			if (newLabel !== currentLabel && newLabel) {
+			  currentLabel = newLabel;
+	  
+			  // Animación: ocultar actual
+			  span.classList.add('opacity-0', 'translate-y-2');
+	  
+			  setTimeout(() => {
+				span.textContent = newLabel;
+				// Animación: mostrar nuevo
+				span.classList.remove('translate-y-2');
+				span.classList.add('translate-y-0');
+				span.classList.remove('opacity-0');
+			  }, 300);
+			}
+		  }
+	  
+		  updateLabel();
+		  window.addEventListener('scroll', () => {
+			window.requestAnimationFrame(updateLabel);
+		  });
 		});
-  
-		return current;
-	  }
-  
-	  function updateLabel() {
-		const section = getCurrentSection();
-		if (!section) return;
-  
-		const newLabel = section.getAttribute('data-label');
-		if (newLabel !== currentLabel && newLabel) {
-		  currentLabel = newLabel;
-  
-		  // Fade out + slide down
-		  span.classList.add('opacity-0', 'translate-y-2');
-			console.log(section.id)
-		  // Esperar a que termine la animación antes de cambiar el texto
-		
-			
-		  setTimeout(() => {
-			span.textContent = newLabel;
-			// Fade in + reset slide
-			span.classList.remove('translate-y-2');
-			span.classList.add('translate-y-0');
-			span.classList.remove('opacity-0');
-		  }, 300); // Debe coincidir con duration-500 (aprox. mitad)
-
-	}
-	  }
-  
-	  // Ejecutar al cargar y al hacer scroll
-	  updateLabel();
-	  window.addEventListener('scroll', () => {
-		window.requestAnimationFrame(updateLabel);
-	  });
-	});
-  </script>
+	  </script>
+	  
 
 <script is:inline>
     window.addEventListener("load", () => {
@@ -190,6 +202,150 @@ const t = useTranslations(lang);
       tags.forEach(tag => observer.observe(tag));
     });
 </script>
+
+<script is:inline>
+    window.addEventListener("load", () => {
+      const tags = document.querySelectorAll(".fade-in");
+  
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("opacity-100", "translate-y-0");
+            entry.target.classList.remove("opacity-0", "translate-y-4");
+          } else {
+            entry.target.classList.remove("opacity-100", "translate-y-0");
+            entry.target.classList.add("opacity-0", "translate-y-4");
+          }
+        });
+      }, { threshold: 0.2 });
+  
+      tags.forEach(tag => observer.observe(tag));
+    });
+</script>
+
+<script is:inline>
+	window.addEventListener("load", () => {
+	  const elements = document.querySelectorAll(".fade-zoom");
+  
+	  const observer = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+		  if (entry.isIntersecting) {
+			entry.target.classList.add("opacity-100", "scale-100");
+			entry.target.classList.remove("opacity-0", "scale-85");
+		  } else {
+			entry.target.classList.remove("opacity-100", "scale-100");
+			entry.target.classList.add("opacity-0", "scale-85");
+		  }
+		});
+	  }, { threshold: 0.2 });
+  
+	  elements.forEach(el => observer.observe(el));
+	});
+  </script>
+
+<script is:inline>
+	window.addEventListener("load", () => {
+	  const elements = document.querySelectorAll(".zoom-bounce");
+  
+	  const observer = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+		  const el = entry.target;
+		  if (entry.isIntersecting) {
+			el.classList.remove("opacity-0", "scale-80");
+			el.classList.add("opacity-100");
+  
+			el.animate([
+			  { transform: "scale(0.8)", opacity: 0 },
+			  { transform: "scale(1.15)", opacity: 1, offset: 0.4 },
+			  { transform: "scale(0.95)", opacity: 1, offset: 0.7 },
+			  { transform: "scale(1.02)", opacity: 1, offset: 0.95 },
+			  { transform: "scale(1.0)", opacity: 1 }
+			], {
+			  duration: 1000,
+			  easing: "ease-out",
+			  fill: "forwards"
+			});
+		  } else {
+			el.classList.remove("opacity-100");
+			el.classList.add("opacity-0", "scale-80");
+		  }
+		});
+	  }, { threshold: 0.2 });
+  
+	  elements.forEach(el => observer.observe(el));
+	});
+  </script>
+
+<script is:inline>
+	window.addEventListener("load", () => {
+	  const titles = document.querySelectorAll(".slide-in");
+  
+	  const observer = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+		  const el = entry.target;
+		  if (entry.isIntersecting) {
+			el.classList.remove("opacity-0", "-translate-x-10");
+			el.classList.add("opacity-100", "translate-x-0");
+		  } else {
+			el.classList.remove("opacity-100", "translate-x-0");
+			el.classList.add("opacity-0", "-translate-x-10");
+		  }
+		});
+	  }, { threshold: 0.2 });
+  
+	  titles.forEach(el => observer.observe(el));
+	});
+  </script>
+
+<script is:inline>
+	window.addEventListener("load", () => {
+	  const titles = document.querySelectorAll(".slide-in-no-op");
+  
+	  const observer = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+		  const el = entry.target;
+		  if (entry.isIntersecting) {
+			el.classList.remove("-translate-x-10");
+			el.classList.add("translate-x-0");
+		  } else {
+			el.classList.remove("translate-x-0");
+			el.classList.add("-translate-x-10");
+		  }
+		});
+	  }, { threshold: 0.2 });
+  
+	  titles.forEach(el => observer.observe(el));
+	});
+  </script>
+
+<script is:inline>
+	window.addEventListener("load", () => {
+	  const titles = document.querySelectorAll(".fade-rotate");
+  
+	  const observer = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+		  const el = entry.target;
+		  if (entry.isIntersecting) {
+			el.classList.remove("opacity-0", "-rotate-3");
+			el.classList.add("opacity-100", "rotate-0");
+		  } else {
+			el.classList.remove("opacity-100", "rotate-0");
+			el.classList.add("opacity-0", "-rotate-3");
+		  }
+		});
+	  }, { threshold: 0.2 });
+  
+	  titles.forEach(el => observer.observe(el));
+	});
+  </script>
+
+
+  
+  
+  
+  
+  
+  
   
   
   

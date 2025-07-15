@@ -32,31 +32,19 @@ const Header = ({ lang }) => {
   const t = useTranslations(lang);
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur-2xl w-full lg:py-1 lg:flex lg:flex-row lg:items-center lg:justify-between lg:px-32 border-b border-gray-500 dark:border-gray-500 ">
-      <div className="flex items-center py-3 px-4">
-  <div className="w-6 h-6 lg:hidden" />
+    <header className="sticky top-0 z-50 backdrop-blur-2xl w-full xl:py-1 xl:flex xl:flex-row xl:items-center xl:justify-between xl:px-32 border-b border-gray-500 dark:border-gray-500 ">
+      <div className="flex items-center lg:py-3 py-2 px-4 gap-2">
+  <div className="w-6 h-6 xl:hidden" />
 
-  <div className="flex flex-1 justify-center lg:flex-none">
-    <span className="text-2xl font-extrabold">Ricardo Molina</span>
+  <div className="flex flex-1 justify-center xl:flex-none">
+    <span className="lg:text-2xl text-base md:text-lg font-extrabold">Ricardo Molina</span>
   </div>
-  <button
-  onClick={toggleTheme}
-  className="ml-4 p-2 rounded-full text-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition"
-  aria-label="Alternar modo oscuro"
->
-  {isDark ? (
-    // Ícono sol
-    <LightIcon />
-  ) : (
-    // Ícono luna
-    <DarkIcon />
-  )}
-</button>
-<a href={`/${lang === 'es' ? 'en' : 'es'}`}>{lang === 'es' ? 'EN' : 'ES'}</a>
+  <ThemeButton toggleTheme={toggleTheme} isDark={isDark} className={"hidden xl:block"} />
 
+  <LanguageLink lang={lang} className="hidden xl:block" />
 
   <button
-    className="lg:hidden"
+    className="xl:hidden"
     onClick={() => setIsOpen(!isOpen)}
     aria-label="Abrir menú"
   >
@@ -74,7 +62,7 @@ const Header = ({ lang }) => {
 
 
       {/* Navegación desktop */}
-      <nav className="hidden lg:flex flex-row justify-center gap-x-6 opacity-90 text-sm">
+      <nav className="hidden xl:flex flex-row justify-center gap-x-8 opacity-90 text-sm">
         <NavLink href="#">{t.sections.home}</NavLink>
         <NavLink href="#experience">{t.sections.experience}</NavLink>
         <NavLink href="#projects">{t.sections.projects}</NavLink>
@@ -86,8 +74,8 @@ const Header = ({ lang }) => {
       </nav>
 
       {/* Sidebar móvil */}
-      <div className={`fixed inset-y-0 z-50 transition-transform duration-300 ease-in-out transform lg:hidden ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
-      <div className="w-72 h-screen bg-white/90 dark:bg-gray-800 shadow-2xl p-6">
+      <div className={`fixed inset-y-0 z-50 transition-transform duration-300 ease-in-out transform xl:hidden ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+      <div className="w-72 h-screen bg-gray-100 dark:bg-gray-800 shadow-2xl p-6">
       {/* Cerrar */}
         <button className="absolute top-4 right-4 text-gray-600 dark:text-white" onClick={() => setIsOpen(false)}>
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -99,7 +87,10 @@ const Header = ({ lang }) => {
         {/* Encabezado Sidebar */}
         <div className="mb-6 mt-2 flex items-center gap-2 ">
           <img src="/logo_circular.webp" className="w-12 h-17"/>
-          <span className="text-lg font-semibold">{t.sections.menu}</span>
+          <span className="text-lg font-semibold">{t.menuSTR}</span>
+          <ThemeButton toggleTheme={toggleTheme} isDark={isDark} className={"block xl:hidden"} />
+          <LanguageLink lang={lang} className="block xl:hidden" />
+
         </div>
 
         <hr className="border-gray-300 dark:border-gray-700 pb-6" />
@@ -183,5 +174,31 @@ const DarkIcon = () => {
 const LightIcon = () => {
     return (
 <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-sun"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 19a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z" /><path d="M18.313 16.91l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 1.218 -1.567l.102 .07z" /><path d="M7.007 16.993a1 1 0 0 1 .083 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7a1 1 0 0 1 1.414 0z" /><path d="M4 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z" /><path d="M21 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z" /><path d="M6.213 4.81l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 1.217 -1.567l.102 .07z" /><path d="M19.107 4.893a1 1 0 0 1 .083 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7a1 1 0 0 1 1.414 0z" /><path d="M12 2a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z" /><path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z" /></svg>
+    );
+}
+
+const ThemeButton = ({toggleTheme, isDark, className}) => {
+    return (
+        <button
+        onClick={toggleTheme}
+        className={`${className} ml-4 p-2 rounded-full text-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition`}
+        aria-label="Alternar modo oscuro"
+      >
+        {isDark ? (
+          // Ícono sol
+          <LightIcon />
+        ) : (
+          // Ícono luna
+          <DarkIcon />
+        )}
+      </button>
+    );
+}
+
+const LanguageLink = ({lang, className}) => {
+    return (
+        <a href={`/${lang === 'es' ? 'en' : 'es'}`} className={className}>
+            {lang === 'es' ? 'EN' : 'ES'}
+        </a>
     );
 }

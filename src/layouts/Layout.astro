@@ -1,6 +1,8 @@
 ---
 
 import '@fontsource-variable/fira-code'
+// Supports only weight 400
+import '@fontsource-variable/roboto-flex';
 import HeaderReact from "../components/Header.jsx";
 
 import Footer from '../components/Footer.astro'
@@ -20,6 +22,7 @@ const t = useTranslations(lang);
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" href="/logo_circular_suave.webp" type="image/webp" sizes="any">
+		<link rel="preload" as="script" href="/js/lottie-player.js">
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={description}>
 		<title>{title}</title>
@@ -62,7 +65,9 @@ const t = useTranslations(lang);
 	}
 	
 	html{
-		font-family: 'Fira Code Variable', monospace;
+		/*font-family: 'Fira Code Variable', monospace;*/
+		/*font-family: 'Public Sans Variable', sans-serif;*/
+		font-family: 'Roboto Flex Variable', 'Fira Code Variable', sans-serif;
 		scroll-behavior: smooth;
 	}
 	body {
@@ -72,6 +77,7 @@ const t = useTranslations(lang);
 		min-height: 100vh;
 
 	}
+	
 	
 	@media (prefers-reduced-motion: reduce){
 		html{
