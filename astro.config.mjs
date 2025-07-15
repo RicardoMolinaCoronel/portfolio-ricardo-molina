@@ -15,6 +15,6 @@ export default defineConfig({
   base: '/',
   outDir: 'dist',
   redirects: {
-    '/': '/es'
+    '/': '/en'
   }
 });

@@ -8,11 +8,15 @@ import CopyCheckIcon from "../icons/CopyCheck.astro";
 import LinkedinIcon from "../icons/LinkedinOriginal.astro";
 import GithubIcon from "../icons/technologies/Github.astro";
 import AnimationContact from "../icons/AnimationContact.astro";
+import { useTranslations, getLangFromUrl } from '../utils/i18n';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 <div class="flex flex-col gap-6 justify-center items-center">
     <h2 class="lg:text-4xl text-3xl font-semibold flex items-center gap-4 flex-row">
         <AnimationContact class="lg:size-14 size-18 -mb-2 -mt-2" />
-        Pongámonos en contacto!
+        {t.contact.title}
 
     </h2>
 <ToolsPill divClass="flex flex-col lg:flex-row justify-between lg:px-10 px-3 lg:py-1 py-3 mt-3 lg:gap-0 gap-5">
@@ -53,13 +57,13 @@ import AnimationContact from "../icons/AnimationContact.astro";
     </div>
 
 </ToolsPill>
-<span>o</span>
+<span>{t.orSTR}</span>
 <div class="flex flex-row gap-2">
-    <a href="https://github.com/ricardoduvalmolinacoronel" title="Ir a GitHub" class="
+    <a href="https://github.com/ricardoduvalmolinacoronel" title="Go to Github" class="
     p-2 bg-gray-900  rounded-full hover:scale-120 transition-all duration-300 cursor-pointer">
         <GithubIcon class="size-7" />
       </a>
-    <a href="https://www.linkedin.com/in/ricardo-duval-molina-coronel/" title="Ir a LinkedIn" class="p-2 dark:bg-white/90 bg-white border border-[var(--primary-black)] dark:border-0 backdrop-blur-2xl rounded-full hover:scale-120 transition-all duration-300 cursor-pointer">
+    <a href="https://www.linkedin.com/in/ricardo-duval-molina-coronel/" title="Go to LinkedIn" class="p-2 dark:bg-white/90 bg-white border border-[var(--primary-black)] dark:border-0 backdrop-blur-2xl rounded-full hover:scale-120 transition-all duration-300 cursor-pointer">
         <LinkedinIcon class="size-7 text-white p-0.5" />
     </a>
 </div>

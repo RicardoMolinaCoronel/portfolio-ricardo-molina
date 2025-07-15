@@ -2,6 +2,10 @@
 import GradientButton from "./GradientButton.astro";
 import AwardIcon from "../icons/Award.astro"
 import { TAGS } from "./TAGS.astro"
+import { useTranslations, getLangFromUrl } from '../utils/i18n';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 interface Props {
     title: string;
@@ -22,7 +26,7 @@ const { title, subtitle, date, description, image, alt, externalLink, imageClass
 
 
 <h3 class="flex flex-col items-start gap-2 lg:text-xl text-lg font-semibold  ">{title} 
-    <span class="lg:text-lg text-base font-light text-gray-700">{subtitle}</span>   
+    <span class="lg:text-lg text-base font-light text-gray-700 dark:text-[var(--primary-white)]">{subtitle}</span>   
     <span class="lg:text-sm text-xs font-light text-gray-700 dark:text-gray-300 -mt-2">{date}</span>   
     <div class="h-[2px] bg-[var(--primary-black)] dark:bg-gray-300 lg:w-[15rem] w-30 mb-2"></div>
 </h3>
@@ -34,7 +38,7 @@ const { title, subtitle, date, description, image, alt, externalLink, imageClass
     </p>
 
     {externalLink && (
-        <GradientButton link={externalLink} label="Ver certificado" gradient="bg-gradient-to-r dark:from-gray-900 dark:to-gray-700 from-gray-300 to-gray-200 hover:bg-gradient-to-r dark:hover:from-gray-800 dark:hover:to-gray-600 hover:from-gray-400 hover:to-gray-300 transition-colors duration-500"><AwardIcon class="text-gray-200 dark:text-gray-700 pl-1"></AwardIcon></GradientButton>
+        <GradientButton link={externalLink} label={t.seeCertificateSTR} gradient="bg-gradient-to-r dark:from-gray-900 dark:to-gray-700 from-gray-300 to-gray-200 hover:bg-gradient-to-r dark:hover:from-gray-800 dark:hover:to-gray-600 hover:from-gray-400 hover:to-gray-300 transition-colors duration-500"><AwardIcon class="text-gray-200 dark:text-gray-700 pl-1"></AwardIcon></GradientButton>
         
     )}
 </div>

@@ -68,5 +68,99 @@
         "title": "Heart Attack Prediction Research",
         "description": "Este proyecto se enfocó en el entrenamiento y evaluación de seis modelos de machine learning utilizando datos tabulares de pacientes, con el objetivo de predecir el riesgo de infarto al miocardio. Se analizaron los modelos MLP Network, Support Vector Machine (SVM), XGBoost, Random Forest, Regresión Logística y Árbol de Decisión. Los modelos XGBoost y Random Forest obtuvieron el mejor desempeño, alcanzando una precisión del 98.75%. Como parte del proyecto, se desarrolló una aplicación web que permite a los usuarios cargar sus datos tabulares y obtener predicciones de manera automatizada."
       }
-    }
+    },
+    "education":{
+      "masterUnir":{
+        "title": "Máster en Inteligencia Artificial (Cursando)",
+        "subtitle": "UNIR - Universidad Internacional de La Rioja",
+        "description": "Durante mi formación en el Máster Oficial en Inteligencia Artificial, adquiriré una preparación integral en las cinco áreas fundamentales de la disciplina con mayor impacto en entornos reales. El programa abarca el aprendizaje automático, orientado al desarrollo de sistemas capaces de aprender a partir de datos; el aprendizaje profundo, basado en redes neuronales para el reconocimiento de voz e imágenes; el procesamiento del lenguaje natural , enfocado en la comprensión del lenguaje humano; la visión por computador, para el análisis automatizado de imágenes y vídeos; y la planificación algorítmica, aplicada a la toma de decisiones y la optimización de procesos. Esta formación me permitirá desarrollar soluciones inteligentes, automatizar tareas complejas y contribuir a mejorar la experiencia humana en distintos contextos tecnológicos.",
+        "date": "Jun. 2025 - Sep. 2026"
+      },
+      "espol":{
+        "title": "Ingeniero en Ciencias Computacionales",
+        "subtitle": "ESPOL - Escuela Superior Politécnica del Litoral",
+        "description":"Durante mi formación como Ingeniero en Ciencias de la Computación en ESPOL, adquirí una preparación integral en distintas áreas del desarrollo de software y las tecnologías de la información. Esta formación me permitió desarrollar un dominio sólido de la Programación Orientada a Objetos y las Estructuras de Datos, fundamentales para crear soluciones escalables y sostenibles. Asimismo, fortalecí mis conocimientos en Diseño de Software y Sistemas de Bases de Datos, competencias clave para construir aplicaciones eficientes y confiables. A través de materias como Programación de Sistemas, Sistemas Operativos y Análisis de Algoritmos, perfeccioné mi capacidad para diseñar sistemas de alto rendimiento y optimización. También incursioné en el desarrollo web y móvil, adquiriendo experiencia en la creación de interfaces funcionales y adaptativas. La Seguridad de la Información formó parte esencial de mis estudios, brindándome las herramientas necesarias para salvaguardar datos y sistemas. El aprendizaje de diversos Lenguajes de Programación me permitió adaptarme a distintos entornos tecnológicos. Además, profundicé en áreas como Ingeniería de Software, Inteligencia Artificial, Sistemas Distribuidos y Computación en la Nube, que me proporcionaron una visión completa sobre el diseño de soluciones inteligentes y distribuidas. Finalmente, mi formación incluyó la Gestión de Proyectos de TI y Sistemas de Información, lo que me preparó para liderar iniciativas tecnológicas y gestionar eficazmente los recursos informáticos en contextos organizacionales.",
+        "date": "May. 2020 - Feb. 2025"
+      },
+      "highSchool":{
+        "title": "Bachiller en Sistemas",
+        "subtitle": "Unidad Educativa Jose Domingo de Santistevan",
+        "description": "Durante mi formación como Bachiller en Sistemas, adquirí una base sólida en diversas áreas clave del desarrollo de software y las tecnologías de la información. Estudié los principios de la programación imperativa y orientada a objetos, así como fundamentos de redes y sistemas de bases de datos, lo que me permitió desarrollar una comprensión integral y aplicada del proceso de construcción de soluciones informáticas eficientes y estructuradas.",
+        "date": "Abr. 2017 - Jan. 2020"
+      }
+    },
+    "achievements":{
+      "awsDataEngineering":{
+        "title":"AWS Academy Graduate - AWS Academy Data Engineering",
+        "subtitle":"Amazon Web Services Training and Certification",
+        "description": "Esta certificación, otorgada por Amazon Web Services (AWS), valida la finalización del curso AWS Academy Data Engineering y certifica competencias clave en el diseño, construcción y mantenimiento de arquitecturas de datos en la nube, así como en la creación de pipelines de datos escalables, la implementación de principios de seguridad en el manejo de datos y el uso de servicios de AWS enfocados en ingeniería de datos. Además, demuestra dominio del ciclo de vida del dato, abarcando su ingesta, procesamiento, almacenamiento y análisis.",
+        "date":"Ene. 2025 - Ene. 2028"
+      },
+      "c1ProficiencyEspol":{
+        "title":"C1 English proficiency - Cambridge Placement Test",
+        "subtitle":"CELEX - Centro de Lenguas Extranjeras / Cambridge",
+        "description":"Certificación otorgada por el Centro de Lenguas Extranjeras (CELEX) de la Escuela Superior Politécnica del Litoral (ESPOL), que acredita el rendimiento del Cambridge Placement Test el 8 de diciembre de 2024, obteniendo el puntaje máximo de 50/50, correspondiente al nivel C1 o superior del Marco Común Europeo de Referencia para las Lenguas (MCER).",
+        "date":"Mar. 2025"
+      },
+      "mentoring":{
+        "title":"Mentoring Program",
+        "subtitle":"ESPOL - Escuela Superior Politécnica del Litoral",
+        "description":"Esta acreditación valida mi participación y compromiso en el Programa Institucional de Mentorías de la Escuela Superior Politécnica del Litoral (ESPOL), donde, como estudiante de último nivel, llevé a cabo un plan de acción orientado al logro de objetivos profesionales mediante cinco sesiones con un mentor del sector industrial. Durante el programa fortalecí habilidades clave como pensamiento crítico, comunicación efectiva, aprendizaje continuo, relacionamiento y competencias para el mercado laboral, dentro de un entorno de acompañamiento, experiencia y networking profesional.",
+        "date":"Feb. 2025 - Feb. 2028"
+      },
+      "advancedSwift":{
+        "title":"Advanced Programming in Swift",
+        "subtitle":"Meta / Coursera",
+        "description": "Certificación emitida por Meta a través de Coursera que valida conocimientos avanzados en desarrollo con Swift, incluyendo la implementación de aplicaciones iOS con capacidades de búsqueda y filtrado, la creación de tipos de datos personalizados, el uso de pruebas unitarias con mocks y fakes, así como buenas prácticas de organización de código utilizando herencia, protocolos y delegación. Esta formación refuerza habilidades en patrones de diseño, testing de software, programación orientada a objetos y desarrollo funcional aplicados al entorno de desarrollo de Apple con Xcode.",
+        "date":"Jul. 2025 - Jul. 2028"
+      },     
+      "kotlinJava":{
+        "title":"Kotlin for Java Developers",
+        "subtitle":"Jetbrains / Coursera",
+        "description":"Certificación emitida por JetBrains a través de Coursera que acredita la finalización del curso Kotlin for Java Developers, el cual fortalece conocimientos en programación orientada a objetos utilizando Kotlin, enfocándose en su interoperabilidad con Java, buenas prácticas en el desarrollo d e aplicaciones Android, uso de Android Studio e IntelliJ IDEA, pruebas unitarias y principios modernos de desarrollo. Este curso proporciona una base sólida para migrar o complementar proyectos Java con Kotlin de manera eficiente y profesional.",
+        "date":"Jun. 2025 - Jun. 2028"
+      },
+      "createSwiftUI":{
+        "title":"Create the User Interface with SwiftUI",
+        "subtitle":"Meta / Coursera",
+        "description":"Certificación que valida competencias en el desarrollo de interfaces de usuario con SwiftUI, enfocadas en la creación de aplicaciones móviles modernas. El curso abarca fundamentos de diseño UI, interactividad, desarrollo de proyectos y mejores prácticas en el ecosistema de desarrollo iOS.",
+        "date":"May. 2025 - May. 2028"
+      },
+      "postgressPlatzi":{
+        "title":"Curso de PostgreSQL",
+        "subtitle":"Platzi",
+        "description":"Certificación que acredita conocimientos en el manejo de bases de datos relacionales con PostgreSQL, incluyendo diseño de esquemas, consultas SQL avanzadas, optimización de rendimiento y administración de bases de datos.",
+        "date":"Abr. 2025 - Abr. 2026"
+      },
+      "springPlatzi":{
+        "title":"Curso de Java Spring",
+        "subtitle":"Platzi",
+        "description": "Certificación que valida competencias en el desarrollo de aplicaciones backend con Java utilizando el framework Spring, incluyendo conceptos como inyección de dependencias, desarrollo de APIs RESTful, manejo de bases de datos y buenas prácticas de arquitectura de software.",
+        "date":"Abr. 2025 - Abr. 2026"
+      }, 
+      "jpaPlatzi":{
+        "title":"Curso de Java Spring Data JPA: Bases de datos",
+        "subtitle":"Platzi",
+        "description": "Certificación que respalda conocimientos en el uso de Spring Data JPA para la gestión eficiente de bases de datos en aplicaciones Java, incluyendo mapeo objeto-relacional (ORM), creación de repositorios, consultas personalizadas y prácticas recomendadas para persistencia de datos.",
+        "date":"Abr. 2025 - Abr. 2026"
+      }, 
+      "dockerPlatzi":{
+        "title":"Curso de Docker: Fundamentos",
+        "subtitle":"Platzi",
+        "description":"Certificación que acredita conocimientos fundamentales en Docker, incluyendo la creación y administración de contenedores, definición de imágenes personalizadas, uso de Dockerfiles y gestión de entornos de desarrollo portables y escalables.",
+        "date":"Abr. 2025 - Abr. 2026"
+      }, 
+      "kubernetesPlatzi":{
+        "title":"Curso de Kubernetes",
+        "subtitle":"Platzi",
+        "description":"Certificación que valida conocimientos en la orquestación de contenedores con Kubernetes, abarcando conceptos clave como despliegue de aplicaciones, gestión de clústeres, configuración de servicios, escalabilidad automática y monitoreo de recursos.",
+        "date":"Abr. 2025 - Abr. 2026"
+      }
+    },
+    "contact":{
+      "title":"Pongámonos en contacto!"
+    },
+    "orSTR":"o",
+    "seeCertificateSTR":"Ver certificado",
+    "visitWebsiteSTR":"Visitar sitio web"
 }

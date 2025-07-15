@@ -1,12 +1,16 @@
 ---
 import {TAGS} from "./TAGS.astro"
 import AchievementItem from "./AchievementItem.astro"
+import { useTranslations, getLangFromUrl } from '../utils/i18n';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 const achievements = [
     {
-        title: "AWS Academy Graduate - AWS Academy Data Engineering",
-        subtitle: "Amazon Web Services Training and Certification",
-        date: "Ene 2025 - Ene 2028",
-        description: `Esta certificación, otorgada por Amazon Web Services (AWS), valida la finalización del curso AWS Academy Data Engineering y certifica competencias clave en el diseño, construcción y mantenimiento de arquitecturas de datos en la nube, así como en la creación de pipelines de datos escalables, la implementación de principios de seguridad en el manejo de datos y el uso de servicios de AWS enfocados en ingeniería de datos. Además, demuestra dominio del ciclo de vida del dato, abarcando su ingesta, procesamiento, almacenamiento y análisis.`,
+        title: t.achievements.awsDataEngineering.title,
+        subtitle: t.achievements.awsDataEngineering.subtitle,
+        date: t.achievements.awsDataEngineering.date,
+        description: t.achievements.awsDataEngineering.description,
         image: "/achievements/awsCertificate.webp",
         alt: "Certificación AWS Academy Data Engineering",
         tags: [TAGS.aws],
@@ -14,12 +18,10 @@ const achievements = [
         externalLink:"https://www.credly.com/badges/4d0622da-437d-4893-a262-1562282cd203/linked_in_profile"
     },
     {
-        title: "C1 English proficiency - Cambridge Placement Test",
-        subtitle: "CELEX - Centro de Lenguas Extranjeras / Cambridge",
-        date: "Mar 2025",
-        description: `Certificación otorgada por el Centro de Lenguas Extranjeras (CELEX) de la Escuela Superior Politécnica del Litoral (ESPOL), que acredita el rendimiento del Cambridge Placement Test el 8 de diciembre de 2024, 
-        obteniendo el puntaje máximo de 50/50, correspondiente al nivel C1 o superior del
-         Marco Común Europeo de Referencia para las Lenguas (MCER).`,
+        title: t.achievements.c1ProficiencyEspol.title,
+        subtitle: t.achievements.c1ProficiencyEspol.subtitle,
+        date: t.achievements.c1ProficiencyEspol.date,
+        description: t.achievements.c1ProficiencyEspol.description,
         image: "/achievements/c1English.webp",
         alt: "English C1 proficiency certification",
         tags: [TAGS.aws],
@@ -27,15 +29,10 @@ const achievements = [
         externalLink:"https://drive.google.com/file/d/1Bai1XLZMlBIkFFV2HnpuOXr2ZV-klNMf/view?usp=drive_link"
     },    
     {
-        title: "Mentoring Program",
-        subtitle: "ESPOL - Escuela Superior Politécnica del Litoral",
-        date: "Feb 2025 - Feb 2028",
-        description: `Esta acreditación valida mi participación y compromiso 
-        en el Programa Institucional de Mentorías de la Escuela Superior Politécnica del Litoral (ESPOL), 
-        donde, como estudiante de último nivel, llevé a cabo un plan de acción orientado al logro de objetivos profesionales 
-        mediante cinco sesiones con un mentor del sector industrial. Durante el programa fortalecí habilidades clave como 
-        pensamiento crítico, comunicación efectiva, aprendizaje continuo, relacionamiento y competencias para el mercado laboral, 
-        dentro de un entorno de acompañamiento, experiencia y networking profesional.`,
+        title: t.achievements.mentoring.title,
+        subtitle: t.achievements.mentoring.subtitle,
+        date: t.achievements.mentoring.date,
+        description: t.achievements.mentoring.description,
         image: "/achievements/mentoring.webp",
         alt: "Mentoring program ESPOL",
         tags: [TAGS.aws],
@@ -43,10 +40,10 @@ const achievements = [
         externalLink:"https://www.acreditta.com/credential/439333a2-bb43-4ed8-8edc-5b22f716c3c6?utm_source=linkedin_profile&resource_type=badge&resource=439333a2-bb43-4ed8-8edc-5b22f716c3c6"
     },    
     {
-        title: "Advanced Programming in Swift",
-        subtitle: "Meta / Coursera",
-        date: "Jul 2025 - Jul 2028",
-        description: `Certificación emitida por Meta a través de Coursera que valida conocimientos avanzados en desarrollo con Swift, incluyendo la implementación de aplicaciones iOS con capacidades de búsqueda y filtrado, la creación de tipos de datos personalizados, el uso de pruebas unitarias con mocks y fakes, así como buenas prácticas de organización de código utilizando herencia, protocolos y delegación. Esta formación refuerza habilidades en patrones de diseño, testing de software, programación orientada a objetos y desarrollo funcional aplicados al entorno de desarrollo de Apple con Xcode.`,
+        title: t.achievements.advancedSwift.title,
+        subtitle: t.achievements.advancedSwift.subtitle,
+        date: t.achievements.advancedSwift.date,
+        description: t.achievements.advancedSwift.description,
         image: "/achievements/advancedSwiftMeta.webp",
         alt: "Advanced Programming in Swift",
         tags: [TAGS.aws],
@@ -54,15 +51,10 @@ const achievements = [
         externalLink:"https://www.coursera.org/account/accomplishments/verify/ZYC0YKSMQCPR"
     },    
     {
-        title: "Kotlin for Java Developers",
-        subtitle: "Jetbrains / Coursera",
-        date: "Jun 2025 - Jun 2028",
-        description: `Certificación emitida por JetBrains a través de Coursera que acredita la finalización 
-        del curso "Kotlin for Java Developers", el cual fortalece conocimientos en programación orientada a 
-        objetos utilizando Kotlin, enfocándose en su interoperabilidad con Java, buenas prácticas en el desarrollo d
-        e aplicaciones Android, uso de Android Studio e IntelliJ IDEA, pruebas unitarias y principios modernos de desarrollo. Este curso proporciona
-         una base sólida para migrar o complementar proyectos Java con Kotlin 
-         de manera eficiente y profesional.`,
+        title: t.achievements.kotlinJava.title,
+        subtitle: t.achievements.kotlinJava.subtitle,
+        date: t.achievements.kotlinJava.date,
+        description: t.achievements.kotlinJava.description,
         image: "/achievements/kotlinJavaJetbrains.webp",
         alt: "Kotlin for Java Developers certificate",
         tags: [TAGS.aws],
@@ -70,15 +62,10 @@ const achievements = [
         externalLink:"https://www.coursera.org/account/accomplishments/verify/MK4HUMU2B80W"
     },
     {
-        title: "Create the User Interface with SwiftUI",
-        subtitle: "Meta / Coursera",
-        date: "May 2025 - May 2028",
-        description: `Certificación emitida por Meta a
-         través de Coursera que valida conocimientos avanzados 
-         en desarrollo con Swift, incluyendo la implementación de aplicaciones iOS con capacidades de búsqueda 
-         y filtrado, la creación de tipos de datos personalizados, el uso de pruebas unitarias con mocks y fakes, 
-         así como buenas prácticas de organización de código utilizando herencia, protocolos y delegación. Esta formación refuerza habilidades en patrones de diseño, testing de software,
-         programación orientada a objetos y desarrollo funcional aplicados al entorno de desarrollo de Apple con Xcode.`,
+        title: t.achievements.createSwiftUI.title,
+        subtitle: t.achievements.createSwiftUI.subtitle,
+        date: t.achievements.createSwiftUI.date,
+        description: t.achievements.createSwiftUI.description,
         image: "/achievements/swiftUIMeta.webp",
         alt: "Create the User Interface with SwiftUI certificate",
         tags: [TAGS.aws],
@@ -86,11 +73,10 @@ const achievements = [
         externalLink:"https://www.coursera.org/account/accomplishments/verify/LTAV3L1BROD3"
     },
     {
-        title: "Curso de PostgreSQL",
-        subtitle: "Platzi",
-        date: "Abr 2025 - Abr 2026",
-        description: `Certificación emitida por Platzi que acredita conocimientos en el manejo de bases de datos relacionales con PostgreSQL, incluyendo diseño de esquemas, consultas SQL avanzadas, 
-        optimización de rendimiento y administración de bases de datos.`,
+        title: t.achievements.postgressPlatzi.title,
+        subtitle: t.achievements.postgressPlatzi.subtitle,
+        date: t.achievements.postgressPlatzi.date,
+        description: t.achievements.postgressPlatzi.description,
         image: "/achievements/postgress_platzi.webp",
         alt: "PostgreSQL certificate",
         tags: [TAGS.aws],
@@ -98,13 +84,10 @@ const achievements = [
         externalLink:"https://platzi.com/p/ricardoduvalmolinacoronel/curso/1480-postgresql/diploma/detalle/"
     },
     {
-        title: "Curso de Java Spring",
-        subtitle: "Platzi",
-        date: "Abr 2025 - Abr 2026",
-        description: `Certificación emitida por Platzi que valida competencias 
-        en el desarrollo de aplicaciones backend con Java utilizando el framework Spring,
-         incluyendo conceptos como inyección de dependencias, desarrollo de APIs RESTful, 
-        manejo de bases de datos y buenas prácticas de arquitectura de software.`,
+        title: t.achievements.springPlatzi.title,
+        subtitle: t.achievements.springPlatzi.subtitle,
+        date: t.achievements.springPlatzi.date,
+        description: t.achievements.springPlatzi.description,
         image: "/achievements/spring_platzi.webp",
         alt: "Java Spring certificate",
         tags: [TAGS.aws],
@@ -112,28 +95,21 @@ const achievements = [
         externalLink:"https://platzi.com/p/ricardoduvalmolinacoronel/curso/1996-java-spring/diploma/detalle/"
     },
     {
-        title: "Curso de Java Spring Data JPA: Bases de datos",
-        subtitle: "Platzi",
-        date: "Abr 2025 - Abr 2026",
-        description: `Certificación emitida por Platzi que respalda conocimientos 
-        en el uso de Spring Data JPA para la gestión eficiente de bases de datos en 
-        aplicaciones Java, incluyendo mapeo objeto-relacional (ORM), creación de 
-        repositorios, consultas personalizadas y prácticas recomendadas para 
-        persistencia de datos.`,
+        title: t.achievements.jpaPlatzi.title,
+        subtitle: t.achievements.jpaPlatzi.subtitle,
+        date: t.achievements.jpaPlatzi.date,
+        description: t.achievements.jpaPlatzi.description,
         image: "/achievements/jpa_platzi.webp",
-        alt: "Curso de Java Spring Data JPA: Bases de datos certificate",
+        alt: "Java Spring Data JPA: Bases de datos certificate",
         tags: [TAGS.aws],
         imageClass: "",
         externalLink:"https://platzi.com/p/ricardoduvalmolinacoronel/curso/7825-java-spring-data/diploma/detalle/"
     },
     {
-        title: "Curso de Docker: Fundamentos",
-        subtitle: "Platzi",
-        date: "Abr 2025 - Abr 2026",
-        description: `Certificación emitida por Platzi que acredita conocimientos 
-        fundamentales en Docker, incluyendo la creación y administración de contenedores,
-         definición de imágenes personalizadas, 
-        uso de Dockerfiles y gestión de entornos de desarrollo portables y escalables.`,
+        title: t.achievements.dockerPlatzi.title,
+        subtitle: t.achievements.dockerPlatzi.subtitle,
+        date: t.achievements.dockerPlatzi.date,
+        description: t.achievements.dockerPlatzi.description,
         image: "/achievements/docker_platzi.webp",
         alt: "Docker Fundamentos certificate",
         tags: [TAGS.aws],
@@ -141,13 +117,10 @@ const achievements = [
         externalLink:"https://platzi.com/p/ricardoduvalmolinacoronel/curso/8781-docker-fundamentos/diploma/detalle/"
     },
     {
-        title: "Curso de Kubernetes",
-        subtitle: "Platzi",
-        date: "Abr 2025 - Abr 2026",
-        description: `Certificación emitida por Platzi que valida 
-        conocimientos en la 
-        orquestación de contenedores con Kubernetes, abarcando conceptos 
-        clave como despliegue de aplicaciones, gestión de clústeres, configuración de servicios, escalabilidad automática y monitoreo de recursos.`,
+        title: t.achievements.kubernetesPlatzi.title,
+        subtitle: t.achievements.kubernetesPlatzi.subtitle,
+        date: t.achievements.kubernetesPlatzi.date,
+        description: t.achievements.kubernetesPlatzi.description,
         image: "/achievements/kubernetes_platzi.webp",
         alt: "Kubernetes certificate",
         tags: [TAGS.aws],

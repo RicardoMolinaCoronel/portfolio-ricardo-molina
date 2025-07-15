@@ -83,7 +83,7 @@
         "date": "May. 2020 - Feb. 2025"
       },
       "highSchool":{
-        "title": "High School Diploma in Information Systems",
+        "title": "Technical High School Diploma in Computer Science",
         "subtitle": "José Domingo de Santistevan School",
         "description": "During my studies for a High School Diploma in Information Systems, I gained a solid foundation in key areas of software development and information technologies. I studied the principles of imperative and object-oriented programming, as well as the fundamentals of networking and database systems, which allowed me to develop a comprehensive and practical understanding of the process of building efficient and well-structured software solutions.",
         "date": "Apr. 2017 - Jan. 2020"
@@ -100,55 +100,70 @@
         "title":"C1 English proficiency - Cambridge Placement Test",
         "subtitle":"CELEX – Center for Foreign Languages / Cambridge",
         "description":"Certification awarded by the Center for Foreign Languages (CELEX) of the Escuela Superior Politécnica del Litoral (ESPOL), recognizing the performance on the Cambridge Placement Test taken on December 8, 2024, with a perfect score of 50/50, corresponding to level C1 or higher of the Common European Framework of Reference for Languages (CEFR).",
-        "date":"Mar. 2024"
+        "date":"Mar. 2025"
       },
       "mentoring":{
-        "title":"Mentorship Program - ESPOL",
-        "subtitle":"ESPOL - Escuela Superior Politécnica del Litoral",
-        "description":"",
-        "date":""
+        "title":"Mentoring Program",
+        "subtitle":"ESPOL",
+        "description":"This accreditation validates my participation and commitment in the Institutional Mentorship Program at Escuela Superior Politécnica del Litoral (ESPOL), where, as a senior-level student, I carried out an action plan aimed at achieving professional goals through five sessions with a mentor from the industrial sector. Throughout the program, I strengthened key skills such as critical thinking, effective communication, continuous learning, relationship-building, and competencies for the job market, all within a framework of guidance, experience, and professional networking.",
+        "date":"Feb. 2025 - Feb. 2028"
       },
       "advancedSwift":{
-        "title":"Mentorship Program - ESPOL",
-        "subtitle":"ESPOL - Escuela Superior Politécnica del Litoral",
-        "description":"",
-        "date":""
+        "title":"Advanced Programming in Swift",
+        "subtitle":"Meta / Coursera",
+        "description":"Certification that validates advanced knowledge in Swift development, including the implementation of iOS applications with search and filtering capabilities, the creation of custom data types, the use of unit testing with mocks and fakes, as well as best practices in code organization using inheritance, protocols, and delegation. This training strengthens skills in design patterns, software testing, object-oriented programming, and functional development within Apple's development environment using Xcode.",
+        "date":"Jul. 2025 - Jul. 2028"
       },     
       "kotlinJava":{
-        "title":"Mentorship Program - ESPOL",
-        "subtitle":"ESPOL - Escuela Superior Politécnica del Litoral",
-        "description":"",
-        "date":""
+        "title":"Kotlin for Java Developers",
+        "subtitle":"Jetbrains / Coursera",
+"description": "Certification that enhances expertise in object-oriented programming with Kotlin, emphasizing its interoperability with Java, best practices in Android application development, and the use of Android Studio and IntelliJ IDEA. It also covers unit testing and modern development principles, providing a strong foundation for efficiently and professionally migrating or complementing Java projects with Kotlin.",
+        "date":"Jun. 2025 - Jun. 2028"
       },
       "createSwiftUI":{
-        "title":"Mentorship Program - ESPOL",
-        "subtitle":"ESPOL - Escuela Superior Politécnica del Litoral",
-        "description":"",
-        "date":""
+        "title":"Create the User Interface with SwiftUI",
+        "subtitle":"Meta / Coursera",
+        "description": "Certification that validates competencies in user interface development with SwiftUI, focused on building modern mobile applications. The course covers UI design fundamentals, interactivity, project development, and best practices within the iOS development ecosystem",
+        "date":"May. 2025 - May. 2028"
       },
       "postgressPlatzi":{
-        "title":"Mentorship Program - ESPOL",
-        "subtitle":"ESPOL - Escuela Superior Politécnica del Litoral",
-        "description":"",
-        "date":""
+        "title":"PostgreSQL Course",
+        "subtitle":"Platzi",
+        "description":"Certification that validates knowledge in managing relational databases with PostgreSQL, including schema design, advanced SQL queries, performance optimization, and database administration.",
+        "date":"Apr. 2025 - Apr. 2026"
       },
-      "postgressPlatzi":{
-        "title":"Mentorship Program - ESPOL",
-        "subtitle":"ESPOL - Escuela Superior Politécnica del Litoral",
-        "description":"",
-        "date":""
+      "springPlatzi":{
+        "title":"Java Spring Course",
+        "subtitle":"Platzi",
+        "description": "Certification that validates competencies in backend application development with Java using the Spring framework, including concepts such as dependency injection, RESTful API development, database management, and software architecture best practices.",
+        "date":"Apr. 2025 - Apr. 2026"
       }, 
-      "postgressPlatzi":{
-        "title":"Mentorship Program - ESPOL",
-        "subtitle":"ESPOL - Escuela Superior Politécnica del Litoral",
-        "description":"",
-        "date":""
+      "jpaPlatzi":{
+        "title":"Java Spring Data JPA: Databases",
+        "subtitle":"Platzi",
+        "description": "Certificationthat validates knowledge in using Spring Data JPA for efficient database management in Java applications, including object-relational mapping (ORM), repository creation, custom queries, and best practices for data persistence.",
+        "date":"Apr. 2025 - Apr. 2026"
       }, 
-      "postgressPlatzi":{
-        "title":"Mentorship Program - ESPOL",
-        "subtitle":"ESPOL - Escuela Superior Politécnica del Litoral",
-        "description":"",
-        "date":""
+      "dockerPlatzi":{
+        "title":"Docker Foundamentals Course",
+        "subtitle":"Platzi",
+        "description":"Certification that validates foundational knowledge in Docker, including the creation and management of containers, definition of custom images, use of Dockerfiles, and the management of portable and scalable development environments.",
+        "date":"Apr. 2025 - Apr. 2026"
+      }, 
+      "kubernetesPlatzi":{
+        "title":"Kubernetes Course",
+        "subtitle":"Platzi",
+        "description":"Certification that validates knowledge in container orchestration with Kubernetes, covering key concepts such as application deployment, cluster management, service configuration, auto-scaling, and resource monitoring.",
+        "date":"Apr. 2025 - Apr. 2026"
       }
-    }
+    },
+    "contact":{
+      "title":"Get in touch!"
+    },
+    "orSTR":"or",
+    "seeCertificateSTR":"See certificate",
+    "visitWebsiteSTR":"Visit website"
+    
+    
+
 }

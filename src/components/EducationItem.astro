@@ -1,6 +1,10 @@
 ---
 import GradientButton from "./GradientButton.astro";
 import LinkIcon from "../icons/Link.astro"
+import { useTranslations, getLangFromUrl } from '../utils/i18n';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 interface Props {
     title: string;
     subtitle: string;
@@ -20,8 +24,8 @@ const { title, subtitle, date, description, image, alt, externalLink, imageClass
 <div class="absolute w-3 h-3 bg-gray-400 rounded-full mt-1.5 -start-1.5 border border-[var(--primary-black)] dark:border-white dark:bg-gray-200"></div>
 <time class="mb-1 lg:text-sm text-xs font-normal leading-none text-gray-700 dark:text-gray-200">{date}</time>
 
-    <h3 class="flex flex-col items-start gap-2 lg:text-lg text-lg font-semibold dark:text-white">{title} 
-        <span class="lg:text-lg text-base font-light text-gray-900 dark:text-white">{subtitle}</span>   
+    <h3 class="flex flex-col items-start gap-2 lg:text-lg text-lg font-semibold dark:text-[var(--primary-white)]">{title} 
+        <span class="lg:text-lg text-base font-light text-gray-900 dark:text-[var(--primary-white)]">{subtitle}</span>   
         <div class="h-[2px] bg-[var(--primary-black)] dark:bg-gray-300 lg:w-25 w-16 mb-2"></div>
     </h3>
     <img src={image} alt={alt} class={`w-45 rounded-2xl mt-5 mb-2 ${imageClass}`}>
@@ -29,6 +33,6 @@ const { title, subtitle, date, description, image, alt, externalLink, imageClass
 
 <p class="mb-4 pb-2 pt-5 lg:text-base text-sm font-normal text-gray-800 dark:text-gray-400 text-pretty">{description}</p>
 {externalLink && (
-    <GradientButton link={externalLink} label="Visitar sitio web" gradient="bg-gradient-to-r dark:from-gray-900 dark:to-gray-700 from-gray-300 to-gray-200 hover:bg-gradient-to-r dark:hover:from-gray-800 dark:hover:to-gray-600 hover:from-gray-400 hover:to-gray-300 transition-colors duration-500" className="ml-3" square><LinkIcon class="text-gray-200 dark:text-gray-700 pl-1"></LinkIcon></GradientButton>
+    <GradientButton link={externalLink} label={t.visitWebsiteSTR} gradient="bg-gradient-to-r dark:from-gray-900 dark:to-gray-700 from-gray-300 to-gray-200 hover:bg-gradient-to-r dark:hover:from-gray-800 dark:hover:to-gray-600 hover:from-gray-400 hover:to-gray-300 transition-colors duration-500" className="ml-3" square><LinkIcon class="text-gray-200 dark:text-gray-700 pl-1"></LinkIcon></GradientButton>
     
 )}
