@@ -77,7 +77,7 @@ const Header = ({ lang }) => {
       <div className={`fixed inset-y-0 z-50 transition-transform duration-300 ease-in-out transform xl:hidden ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
       <div className="w-72 h-screen bg-gray-100 dark:bg-gray-800 shadow-2xl p-6">
       {/* Cerrar */}
-        <button className="absolute top-4 right-4 text-gray-600 dark:text-white" onClick={() => setIsOpen(false)}>
+        <button className="absolute top-4 right-4 text-gray-600 dark:text-white cursor-pointer" onClick={() => setIsOpen(false)}>
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
               d="M6 18L18 6M6 6l12 12" />
@@ -181,7 +181,7 @@ const ThemeButton = ({toggleTheme, isDark, className}) => {
     return (
         <button
         onClick={toggleTheme}
-        className={`${className} ml-4 p-2 rounded-full text-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition`}
+        className={`${className} ml-4 p-2 rounded-full text-gray-800 dark:text-white dark:hover:text-blue-300 hover:text-[var(--blue-300)] transition-all duration-300 cursor-pointer`}
         aria-label="Alternar modo oscuro"
       >
         {isDark ? (
@@ -197,7 +197,7 @@ const ThemeButton = ({toggleTheme, isDark, className}) => {
 
 const LanguageLink = ({lang, className}) => {
     return (
-        <a href={`/${lang === 'es' ? 'en' : 'es'}`} className={className}>
+        <a href={`/${lang === 'es' ? 'en' : 'es'}`} className={`${className} dark:hover:text-blue-300 hover:text-[var(--blue-300)] transition-all duration-300 cursor-pointer`}>
             {lang === 'es' ? 'EN' : 'ES'}
         </a>
     );
