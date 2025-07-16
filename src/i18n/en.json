@@ -35,10 +35,16 @@
         "description":"As a software developer, I have taken on both technical and leadership roles in frontend, backend, and mobile application development projects. I have been involved in building mobile and desktop solutions using Java and Kotlin, integrating features for interaction with RFID hardware and security devices. Additionally, I have developed web applications using technologies such as React.js, Firebase, and Node.js, focused on inventory management and sales control. I have also contributed to various backend projects using frameworks like Express.js, Spring Boot, and Laravel."
       },
       "espol": {
-        "title": "Research Assistant",
+        "title": "ESPOL",
         "subtitle": "Data and Machine Learning Engineer",
         "date": "September 2024 - February 2025",
         "description": "As a research assistant, I actively participated in conducting experiments and preparing reports for two projects focused on disease diagnosis through data engineering and artificial intelligence. In the first study, we analyzed tabular clinical data from patients using seven machine learning models to predict the risk of heart attacks. In the second research project, we evaluated ten machine learning and deep learning models to estimate the risk of Parkinson's disease, using IMU sensor data captured during straight-line walking tests. We achieved promising results, reaching up to 93.79% accuracy. Currently, an article with the findings of this research is in the process of being published in ACM journals."
+      },
+      "contabilly": {
+        "title": "Contabilly S.A.S",
+        "subtitle": "Software Developer (Internship)",
+        "date": "September 2023 - February 2024",
+        "description": "I was part of a Scrum team as a developer, contributing to the full-stack development of a product supply and demand system with collective posting features. I worked on the web frontend using React.js, SASS, Redux, Firebase, and Lottie; the backend with Express.js, JWT, CORS, and Sequelize over MySQL; and the mobile app with React Native and Expo, ensuring a smooth cross-platform experience."
       }
     },
     "projects":{
