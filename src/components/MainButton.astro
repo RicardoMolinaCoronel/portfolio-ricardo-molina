@@ -4,6 +4,10 @@ import AwardIcon from "../icons/Award.astro"
 import ArrowRightIcon from "../icons/ArrowRight.astro"
 import ChevronIcon from "../icons/Chevron.astro";
 import { TAGS } from "./TAGS.astro"
+import { useTranslations, getLangFromUrl } from '../utils/i18n';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 interface Props {
     link: string;
@@ -20,7 +24,7 @@ const {  link, label, gradient, className } = Astro.props;
     <a href={link} class={`group relative ${className}`}>
 
         <div class="relative border dark:border-blue-300 border-[var(--blue-300)] dark:hover:border-gray-400 hover:border-gray-700 px-2 lg:px-4 py-2 rounded-full text-center  font-medium active:scale-110 transition-transform hover:animate-pulse overflow-hidden lg:w-100 w-80">
-            <span class="relative flex items-center justify-center  z-20">{label}</span>
+            <span class="relative flex items-center justify-center  z-20">{t.mainButtonText}</span>
             <span class="absolute top-1/2 -left-5 -translate-y-1/2 w-5 h-5 z-12 transition-all group-hover:translate-x-120 duration-500">
                 <ChevronIcon class="text-gray-100 size-5" />
               </span>

@@ -2,6 +2,7 @@
   "technologiesSTR": "Tecnologías",
   "mainProjectsSTR": "Principales Proyectos",
   "menuSTR": "Menú",
+  "mainButtonText": "Construyamos soluciones increíbles",
     "hero": {
       "title": "Soy Ricardo Molina",
       "subtitle1": "Ingeniero en Ciencias Computacionales con",
@@ -39,6 +40,12 @@
         "subtitle": "Ingeniero de datos y machine learning",
         "date": "Febrero 2022",
         "description": "Como ayudante de investigación, participé activamente en la ejecución de experimentos y elaboración de reportes en dos proyectos enfocados en el diagnóstico de enfermedades mediante ingeniería de datos e inteligencia artificial. En el primer estudio, analizamos datos clínicos tabulares de pacientes utilizando siete modelos de machine learning para predecir el riesgo de sufrir ataques cardíacos. En la segunda investigación, evaluamos diez modelos de machine learning y deep learning para estimar el riesgo de padecer la enfermedad de Parkinson, empleando datos de sensores IMU capturados durante pruebas de marcha en línea recta. Obtuvimos resultados prometedores, alcanzando hasta un 93.79% de precisión. Actualmente, un artículo con los hallazgos de esta investigación se encuentra en proceso de publicación en ACM journals."
+      },
+      "contabilly": {
+        "title": "Contabilly S.A.S",
+        "subtitle": "Desarrollador de software (Contrato de prácticas)",
+        "date": "Septiembre 2023 - Febrero 2024",
+        "description": "Formé parte de un equipo Scrum como desarrollador, contribuyendo al desarrollo full-stack de un sistema de oferta y demanda de productos con publicación colectiva. Trabajé en el frontend web con React.js, SASS, Redux, Firebase y Lottie; en el backend con Express.js, JWT, CORS y Sequelize sobre MySQL; y en la app móvil con React Native y Expo, asegurando una experiencia multiplataforma fluida."
       }
     },
     "projects":{
