@@ -135,6 +135,12 @@
         "description": "Certification that validates competencies in user interface development with SwiftUI, focused on building modern mobile applications. The course covers UI design fundamentals, interactivity, project development, and best practices within the iOS development ecosystem",
         "date":"May. 2025 - May. 2028"
       },
+      "foundationAIMicrosoft":{
+        "title":"Foundations of AI & Machine Learning",
+        "subtitle":"Microsoft / Coursera",
+        "description":"This course provided a comprehensive introduction to artificial intelligence and machine learning concepts, focusing on practical applications in data-driven environments. Topics covered included data cleansing, MLOps, data pipelines, cloud services, model deployment, and scalability. The program also emphasized security, version control, and real-world workflows using modern AI/ML frameworks.",
+        "date":"Aug. 2025 - Aug. 2028"
+      },
       "postgressPlatzi":{
         "title":"PostgreSQL Course",
         "subtitle":"Platzi",
